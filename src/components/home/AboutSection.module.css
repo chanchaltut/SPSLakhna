@@ -1,0 +1,153 @@
+.aboutWrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 80px 40px 0 40px; /* no bottom padding — wave handles it */
+}
+
+.aboutContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.eyebrow {
+  font-family: var(--font-lato);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-baloo);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1A1A1A;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  text-align: left;
+}
+
+.imageContainer {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paragraph {
+  font-family: var(--font-lato);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #444;
+}
+
+.bold {
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(123,63,160,0.25);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-teal);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #153846;
+  transform: translateY(-2px);
+}
+
+/* Wave at bottom — bg stays WHITE, wave fill = PURPLE */
+.waveBottom {
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aboutWrapper {
+    padding: 60px 24px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,57 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1;
+}
+
+.mark {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.name {
+  font-family: var(--font-baloo);
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.2px;
+  color: var(--color-teal);
+  white-space: nowrap;
+}
+
+.swagat {
+  color: var(--color-primary);
+}
+
+.place {
+  font-family: var(--font-lato);
+  font-weight: 900;
+  font-size: 10.5px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+}
+
+/* Compact size */
+.sm .mark { width: 42px; height: 42px; }
+.sm .name { font-size: 19px; }
+.sm .place { font-size: 9px; letter-spacing: 2.2px; }
+.sm .text { gap: 4px; }
+
+/* On dark / coloured surfaces */
+.light .name,
+.light .swagat { color: #FFFFFF; }
+.light .place { color: var(--color-accent); }
+
+@media (max-width: 480px) {
+  .md .mark { width: 44px; height: 44px; }
+  .md .name { font-size: 19px; }
+  .md .place { font-size: 9px; letter-spacing: 2.2px; }
+}

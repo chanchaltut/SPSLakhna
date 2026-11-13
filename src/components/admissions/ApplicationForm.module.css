@@ -1,0 +1,144 @@
+.formWrapper {
+  background-color: var(--color-bg-white);
+  padding: 80px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  margin-top: -60px; /* Pull up over the hero wave */
+  position: relative;
+  z-index: 10;
+  margin-bottom: 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-lato);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-baloo);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.formGroup {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--font-baloo);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--color-bg-cream);
+  padding-bottom: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: var(--font-lato);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  font-family: var(--font-lato);
+  font-size: 15px;
+  color: var(--color-text-dark);
+  background-color: #F9FAFB;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+  background-color: white;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.checkbox {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.checkboxLabel {
+  font-family: var(--font-lato);
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.submitButton {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-family: var(--font-baloo);
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .formWrapper {
+    padding: 40px 24px;
+    margin-top: -30px;
+    border-radius: 16px;
+  }
+}

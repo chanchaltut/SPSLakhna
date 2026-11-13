@@ -1,0 +1,108 @@
+.sectionWrapper {
+  background-color: #F5F1EA;
+  padding: 72px 40px;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-lato);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-baloo);
+  font-size: 38px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: var(--font-lato);
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(123,63,160,0.1);
+  border-color: var(--color-primary-light);
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #F5F1EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.cardTitle {
+  font-family: var(--font-baloo);
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 4px;
+}
+
+.ageGroup {
+  font-family: var(--font-lato);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.cardDesc {
+  font-family: var(--font-lato);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .sectionWrapper { padding: 56px 24px; }
+  .title { font-size: 28px; }
+  .grid { grid-template-columns: 1fr; }
+}
