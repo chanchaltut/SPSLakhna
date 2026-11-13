@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/home/chanchal/Desktop/Clients/SPSLakhna/src/app/layout":["static/media/a65324f02aa278dc-s.p.woff2","static/media/6d664cce900333ee-s.p.woff2","static/media/4de1fea1a954a5b6-s.p.woff2","static/media/7ff6869a1704182a-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
