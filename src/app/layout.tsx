@@ -1,25 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Baloo_2, Lato } from "next/font/google";
+import { Fraunces, Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SchoolJsonLd } from "@/components/seo/JsonLd";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { site } from "@/lib/site";
 
-const baloo = Baloo_2({
+const display = Fraunces({
   subsets: ["latin"],
-  variable: "--font-baloo",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-display",
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
-const lato = Lato({
+const body = Figtree({
   subsets: ["latin"],
-  variable: "--font-lato",
-  weight: ["400", "700", "900"],
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#7B3FA0",
+  themeColor: "#47206B",
   width: "device-width",
   initialScale: 1,
 };
@@ -43,12 +45,17 @@ export const metadata: Metadata = {
     "Nursery LKG UKG admission Lakhna",
     "Nursery to Class 5 school Odisha",
     "public school Nuapada district",
+    "best school in Lakhna",
+    "best primary school in Nuapada",
+    "school near Khariar Road",
+    "school near Komna",
+    "play school in Lakhna Nuapada",
   ],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
   category: "education",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { "en-IN": "/", "x-default": "/" } },
   formatDetection: { telephone: true, email: true, address: true },
   openGraph: {
     title: "Swagat Public School, Lakhna | Where Every Child is Welcome",
@@ -101,11 +108,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body className={`${baloo.variable} ${lato.variable}`}>
+      <body className={`${display.variable} ${body.variable}`}>
         <SchoolJsonLd />
+        <a href="#main" className="visually-hidden">Skip to content</a>
         <Navbar />
-        {children}
+        <div id="main">{children}</div>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

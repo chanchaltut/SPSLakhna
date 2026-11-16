@@ -1,0 +1,31 @@
+.header {
+  padding: 28px 0 clamp(44px, 6vw, 76px);
+  background:
+    radial-gradient(820px 420px at 92% 0%, rgba(237, 224, 247, 0.95), transparent 70%),
+    radial-gradient(520px 300px at 0% 100%, rgba(253, 244, 225, 0.9), transparent 70%),
+    var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--ink-faint);
+}
+
+.crumbs a:hover { color: var(--purple-700); }
+.crumbs span { color: var(--ink); font-weight: 600; }
+
+.inner {
+  max-width: 800px;
+  margin-top: clamp(32px, 5vw, 60px);
+}
+
+.title {
+  margin-top: 18px;
+  font-size: clamp(36px, 5vw, 62px);
+}
+
+.lead { margin-top: 22px; max-width: 62ch; }

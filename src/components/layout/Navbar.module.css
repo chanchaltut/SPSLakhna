@@ -1,149 +1,146 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: transparent;
+/* ─── Utility bar ─── */
+.topbar {
+  background-color: var(--purple-900);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+}
+
+.topbarInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
-  z-index: 1000;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 24px;
+  min-height: 40px;
 }
 
-.navbarScrolled {
-  background-color: rgba(250, 247, 242, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 24px rgba(123, 63, 160, 0.08);
-  height: 80px;
+.topbarNote {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--gold-300);
 }
 
-.navbarHidden {
-  transform: translateY(-100%);
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--gold-500);
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.22);
 }
 
-/* ─── Logo ─── */
+.topbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.topbarLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.topbarLinks a:hover { color: #fff; }
+
+/* ─── Header ─── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 800;
+  background-color: rgba(250, 247, 242, 0.9);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headerScrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 10px 30px -22px rgba(42, 18, 56, 0.5);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 84px;
+}
+
 .logoLink {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-.logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-  transition: height 0.3s ease;
-}
-
-.navbarScrolled .logo {
-  height: 42px;
-}
-
-/* ─── Desktop Nav Links (PILL DESIGN) ─── */
 .desktopNav {
   display: flex;
   align-items: center;
-  gap: 28px;
-  background-color: var(--color-bg-white);
-  padding: 6px 6px 6px 28px;
-  border-radius: 100px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(123, 63, 160, 0.05);
+  gap: clamp(18px, 2.2vw, 32px);
 }
 
 .navLink {
-  font-family: var(--font-lato);
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--color-text-dark);
   position: relative;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-
-.navLink:hover {
-  color: var(--color-primary);
-}
-
-.activeNavLink {
-  background-color: #905391; /* Matched from reference */
-  color: white !important;
-  padding: 8px 20px;
-  border-radius: 100px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(144, 83, 145, 0.3);
-}
-
-.ctaButton {
-  background-color: #905391;
-  color: white;
-  padding: 10px 24px;
-  border-radius: 100px;
-  font-family: var(--font-baloo);
-  font-weight: 700;
+  padding: 8px 0;
   font-size: 15px;
-  border: none;
-  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--gold-500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.navLink:hover { color: var(--purple-700); }
+.navLink:hover::after { transform: scaleX(1); }
+
+.navLinkActive { color: var(--purple-800); }
+.navLinkActive::after { transform: scaleX(1); }
+
+.actions {
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(144, 83, 145, 0.3);
+  gap: 12px;
 }
 
-.ctaButton:hover {
-  background-color: #79437a;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(144, 83, 145, 0.4);
-}
-
-/* ─── Hamburger Button ─── */
-.hamburger {
+.menuButton {
   display: none;
-  background: white;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  z-index: 1001;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background-color: var(--paper);
+  color: var(--purple-800);
+  cursor: pointer;
 }
 
-.bar {
-  display: block;
-  width: 24px;
-  height: 2.5px;
-  background-color: var(--color-primary);
-  border-radius: 3px;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center;
-}
-
-.bar1Open { transform: translateY(7.5px) rotate(45deg); }
-.bar2Open { opacity: 0; width: 0; }
-.bar3Open { transform: translateY(-7.5px) rotate(-45deg); }
-
-/* ─── Backdrop Blur Overlay ─── */
+/* ─── Drawer ─── */
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(26, 26, 26, 0.45);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   z-index: 998;
+  background: rgba(33, 21, 43, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.3s ease;
 }
 
 .backdropOpen {
@@ -151,127 +148,111 @@
   pointer-events: all;
 }
 
-/* ─── Sidebar Drawer ─── */
-.sidebar {
+.drawer {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 70vw;
-  max-width: 340px;
-  height: 100dvh;
-  background-color: var(--color-bg-cream);
+  right: 0;
   z-index: 999;
-  transform: translateX(-100%);
-  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  width: min(88vw, 380px);
+  height: 100dvh;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  overflow: hidden;
-  box-shadow: 4px 0 32px rgba(0, 0, 0, 0.12);
+  background-color: var(--purple-900);
+  color: #fff;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.4s var(--ease), visibility 0s linear 0.4s;
 }
 
-.sidebarOpen { transform: translateX(0); }
+.drawerOpen {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.4s var(--ease), visibility 0s;
+}
 
-.sidebarHeader {
+.drawerHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
-  background-color: #905391;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line-light);
 }
 
-.sidebarLogo {
-  height: 38px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  object-fit: contain;
-}
-
-.sidebarCloseBtn {
-  background: rgba(255,255,255,0.2);
-  border: none;
-  width: 36px;
-  height: 36px;
+.closeButton {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  border: 1px solid var(--line-light);
+  background: transparent;
+  color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.sidebarNav {
+.drawerNav {
   flex: 1;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   overflow-y: auto;
+  padding: 14px 22px;
 }
 
-.sidebarLink {
+.drawerLink {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
-  border-radius: 12px;
-  font-family: var(--font-baloo);
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-text-dark);
-  text-decoration: none;
-  transition: all 0.2s ease;
+  align-items: baseline;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line-light);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.sidebarLink:hover {
-  background-color: rgba(144, 83, 145, 0.1);
-  color: #905391;
-  transform: translateX(4px);
+.drawerLinkActive { color: var(--gold-300); }
+
+.drawerIndex {
+  font-family: var(--font-body), sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-500);
 }
 
-.sidebarIcon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
+.drawerFooter {
+  padding: 22px;
+  border-top: 1px solid var(--line-light);
+}
+
+.drawerContacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 18px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.drawerContacts a,
+.drawerContacts span {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  gap: 7px;
 }
 
-.sidebarDivider {
-  height: 1px;
-  background-color: rgba(144, 83, 145, 0.15);
-  margin: 12px 0;
-}
-
-.sidebarFooter {
-  padding: 24px;
-  border-top: 1px solid rgba(144, 83, 145, 0.15);
-}
-
-.sidebarCta {
-  display: block;
-  width: 100%;
-  background-color: #905391;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 50px;
-  font-family: var(--font-baloo);
-  font-weight: 700;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 4px 16px rgba(144, 83, 145, 0.3);
-}
-
-/* ─── Mobile Responsive ─── */
-@media (max-width: 992px) {
+/* ─── Responsive ─── */
+@media (max-width: 1120px) {
   .desktopNav { display: none; }
-  .hamburger { display: flex; }
-  .navbar { padding: 0 24px; height: 80px; }
-  .navbarScrolled { height: 72px; }
+  .menuButton { display: inline-flex; }
+}
+
+@media (max-width: 760px) {
+  .topbarEmail { display: none !important; }
+  .bar { height: 72px; }
+}
+
+@media (max-width: 520px) {
+  .cta { display: none; }
+  .topbarInner { justify-content: center; }
+  .topbarLinks { display: none; }
 }

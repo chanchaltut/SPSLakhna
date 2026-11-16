@@ -1,0 +1,544 @@
+/* Shared styles for inner pages */
+
+/* ─── Two-column story ─── */
+.split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: clamp(36px, 7vw, 100px);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.media img { object-fit: cover; }
+
+.prose {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+  color: var(--ink-soft);
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
+.prose strong { color: var(--ink); font-weight: 650; }
+
+/* ─── Numbered columns ─── */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.column {
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.column::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 64px;
+  height: 2px;
+  background-color: var(--gold-500);
+}
+
+.columnIndex {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--gold-700);
+}
+
+.column h3 {
+  margin: 12px 0 10px;
+  font-size: 23px;
+}
+
+.column p {
+  color: var(--ink-soft);
+  font-size: 15.5px;
+}
+
+/* ─── Facts table ─── */
+.factsCard {
+  padding: clamp(8px, 2vw, 16px) clamp(22px, 4vw, 44px);
+}
+
+.factRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.factRow:last-child { border-bottom: 0; }
+
+.factRow dt {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: 3px;
+}
+
+.factRow dd {
+  font-weight: 600;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.factRow dd a { color: var(--purple-700); }
+.factRow dd a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── Programme stage cards ─── */
+.stages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.stage {
+  padding: clamp(28px, 4vw, 48px);
+  position: relative;
+  overflow: hidden;
+}
+
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background-color: var(--purple-600);
+}
+
+.stageAlt::before { background-color: var(--gold-500); }
+
+.stageIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--purple-200);
+  color: var(--purple-700);
+}
+
+.stage h2 {
+  margin-top: 22px;
+  font-size: clamp(26px, 3vw, 34px);
+}
+
+.stageMeta {
+  margin: 8px 0 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-700);
+}
+
+.stage > p { color: var(--ink-soft); }
+
+.checkList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkList svg { color: var(--purple-600); flex-shrink: 0; }
+
+/* ─── Stats band ─── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(520px 260px at 0% 0%, rgba(123, 63, 160, 0.5), transparent 70%),
+    var(--purple-900);
+  color: #fff;
+}
+
+.stat {
+  padding-inline: clamp(12px, 2.4vw, 32px);
+  border-left: 1px solid var(--line-light);
+}
+
+.stat:first-child { border-left: 0; }
+
+.stat strong {
+  display: block;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(34px, 4.4vw, 54px);
+  font-weight: 480;
+  line-height: 1;
+  color: var(--gold-300);
+}
+
+.stat span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ─── Class list (programs) ─── */
+.classList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(32px, 6vw, 88px);
+}
+
+.classList li {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.classList h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.classList h3 span {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: var(--purple-100);
+  color: var(--purple-700);
+  font-family: var(--font-body), sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.classList p { color: var(--ink-soft); font-size: 15.5px; }
+
+/* ─── Schedule table ─── */
+.tableCard { overflow: hidden; }
+
+.tableHead {
+  padding: clamp(22px, 3vw, 34px) clamp(22px, 4vw, 40px);
+  border-bottom: 1px solid var(--line);
+}
+
+.tableHead h2 { font-size: clamp(24px, 2.8vw, 32px); }
+.tableHead p { margin-top: 8px; color: var(--ink-soft); }
+
+.tableScroll { overflow-x: auto; }
+
+.table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15.5px;
+}
+
+.table th,
+.table td {
+  padding: 18px clamp(22px, 4vw, 40px);
+  border-bottom: 1px solid var(--line);
+}
+
+.table thead th {
+  background-color: var(--purple-50);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple-700);
+}
+
+.table tbody th { font-weight: 650; color: var(--ink); }
+.table td { color: var(--ink-soft); }
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+  font-weight: 700;
+  color: var(--purple-700);
+}
+
+/* ─── Admissions ─── */
+.admitGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.aside {
+  position: sticky;
+  top: 116px;
+}
+
+.aside h2 { font-size: clamp(24px, 2.6vw, 30px); margin-top: 14px; }
+
+.stepList {
+  list-style: none;
+  margin-top: 26px;
+  display: grid;
+  gap: 22px;
+}
+
+.stepList li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+}
+
+.stepList li > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-500);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 18px;
+  color: var(--purple-800);
+}
+
+.stepList h3 {
+  font-family: var(--font-body), sans-serif;
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 4px;
+}
+
+.stepList p { font-size: 15px; color: var(--ink-soft); }
+
+.note {
+  margin-top: 32px;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  background-color: var(--purple-50);
+  border: 1px solid var(--purple-200);
+}
+
+.note h3 {
+  font-family: var(--font-body), sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple-700);
+  margin-bottom: 12px;
+}
+
+.note ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.note li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.note li span:last-child { font-weight: 650; }
+
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* ─── Gallery ─── */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.shot {
+  position: relative;
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--purple-100);
+}
+
+.shot:nth-child(4n + 1),
+.shot:nth-child(4n) { grid-column: span 7; aspect-ratio: 16 / 10; }
+.shot:nth-child(4n + 2),
+.shot:nth-child(4n + 3) { grid-column: span 5; aspect-ratio: auto; }
+
+.shot img {
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.shot:hover img { transform: scale(1.04); }
+
+.shot figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 48px 22px 18px;
+  background: linear-gradient(to top, rgba(42, 18, 56, 0.82), transparent);
+  color: #fff;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* ─── Blog ─── */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.post { overflow: hidden; }
+
+.postImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background-color: var(--purple-100);
+}
+
+.postImage img { object-fit: cover; }
+
+.postBody { padding: 24px 26px 28px; }
+
+.postTag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-700);
+}
+
+.postBody h2 {
+  margin: 10px 0;
+  font-size: 23px;
+}
+
+.postBody p { color: var(--ink-soft); font-size: 15.5px; }
+
+/* ─── Contact ─── */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--line);
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: clamp(22px, 2.6vw, 32px);
+  background-color: var(--paper);
+  min-width: 0;
+  transition: background-color 0.3s ease;
+}
+
+a.infoCard:hover { background-color: var(--purple-50); }
+
+.infoCard svg { color: var(--purple-600); margin-bottom: 10px; }
+
+.infoLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.infoValue {
+  font-size: 16.5px;
+  font-weight: 650;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: stretch;
+}
+
+.contactCard { padding: clamp(24px, 4vw, 44px); }
+.contactCard h2 { font-size: clamp(24px, 2.8vw, 32px); margin: 14px 0 8px; }
+.contactCard > p { color: var(--ink-soft); margin-bottom: 26px; }
+
+.mapCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 480px;
+}
+
+.mapCol > div:first-child { flex: 1; }
+
+.mt { margin-top: clamp(40px, 6vw, 72px); }
+
+/* ─── Responsive ─── */
+@media (max-width: 960px) {
+  .split,
+  .admitGrid,
+  .contactGrid,
+  .stages { grid-template-columns: 1fr; }
+
+  .aside { position: static; }
+  .columns { grid-template-columns: 1fr; }
+  .posts { grid-template-columns: 1fr 1fr; }
+  .infoGrid { grid-template-columns: 1fr 1fr; }
+
+  .stats { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+  .stat:nth-child(odd) { border-left: 0; }
+}
+
+@media (max-width: 720px) {
+  .classList { grid-template-columns: 1fr; }
+  .gallery { gap: 14px; }
+  .shot,
+  .shot:nth-child(n) { grid-column: span 12; aspect-ratio: 4 / 3; }
+  .factRow { grid-template-columns: 1fr; gap: 4px; }
+}
+
+@media (max-width: 560px) {
+  .posts,
+  .infoGrid,
+  .checkList { grid-template-columns: 1fr; }
+}

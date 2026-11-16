@@ -2,67 +2,115 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './Footer.module.css';
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Clock } from 'lucide-react';
-import Logo from '@/components/ui/Logo';
-import { site } from '@/lib/site';
+import { LogoMark } from '@/components/ui/Logo';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppButton';
+import { site, whatsappLink, defaultWhatsappText } from '@/lib/site';
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'About the School', href: '/about' },
+  { label: 'Programs', href: '/programs' },
+  { label: 'Admissions', href: '/admissions' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'FAQs', href: '/#faq' },
+];
+
+const socials = [
+  { label: 'Facebook', href: site.socials.facebook, icon: Facebook },
+  { label: 'Instagram', href: site.socials.instagram, icon: Instagram },
+  { label: 'YouTube', href: site.socials.youtube, icon: Youtube },
+].filter((s) => s.href);
 
 export default function Footer() {
   return (
-    /* DARK TEAL — flows directly from CTA's teal wave, no top wave */
-    <footer className={`${styles.footerContent} pattern-bg-dark`}>
-      <div className={styles.grid}>
-        <div className={styles.column}>
-          <div style={{ marginBottom: '18px' }}>
-            <Logo variant="light" size="sm" />
+    <footer className={styles.footer}>
+      <div className="container">
+        <div className={styles.grid}>
+          <div className={styles.brand}>
+            <LogoMark size={84} className={styles.seal} />
+            <p className={styles.brandName}>{site.name}</p>
+            <p className={styles.tagline}>{site.tagline}</p>
+            <p className={styles.text}>
+              A kindergarten and primary school in {site.address.locality}, {site.address.district} district, {site.address.region},
+              teaching {site.grades} since {site.founded}.
+            </p>
+            <div className={styles.socials}>
+              <a
+                href={whatsappLink(defaultWhatsappText)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon size={17} />
+              </a>
+              {socials.map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label={s.label}>
+                  <s.icon size={17} />
+                </a>
+              ))}
+            </div>
           </div>
-          <p className={styles.text}>
-            A welcoming school in {site.address.locality}, {site.address.district}, where learning begins with care and every child builds a strong foundation for the future.
-          </p>
-          <p className={styles.tagline}>{site.tagline}</p>
-          <div className={styles.socials}>
-            <a href={site.socials.facebook} className={styles.socialIcon} aria-label="Facebook"><Facebook size={18} /></a>
-            <a href={site.socials.instagram} className={styles.socialIcon} aria-label="Instagram"><Instagram size={18} /></a>
-            <a href={site.socials.youtube} className={styles.socialIcon} aria-label="YouTube"><Youtube size={18} /></a>
+
+          <nav className={styles.column} aria-label="Footer">
+            <h2 className={styles.heading}>Explore</h2>
+            <ul className={styles.navLinks}>
+              {links.map((l) => (
+                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              ))}
+            </ul>
+          </nav>
+
+          <address className={styles.column}>
+            <h2 className={styles.heading}>Contact</h2>
+            <ul className={styles.contactList}>
+              <li>
+                <Phone size={16} />
+                <span>
+                  <a href={site.phoneHref}>{site.phone}</a>
+                  <small>Call or WhatsApp</small>
+                </span>
+              </li>
+              <li>
+                <Mail size={16} />
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+              </li>
+              <li>
+                <MapPin size={16} />
+                <a href={site.maps.link} target="_blank" rel="noopener noreferrer">
+                  {site.address.locality}, Dist. {site.address.district},<br />
+                  {site.address.region} {site.address.postalCode}, {site.address.country}
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <div className={styles.column}>
+            <h2 className={styles.heading}>School Hours</h2>
+            <ul className={styles.contactList}>
+              <li>
+                <Clock size={16} />
+                <span>
+                  Monday – Saturday
+                  <small>8:00 AM – 2:00 PM</small>
+                </span>
+              </li>
+              <li className={styles.muted}>
+                <Clock size={16} />
+                <span>Sunday<small>Closed</small></span>
+              </li>
+            </ul>
+            <Link href="/admissions" className={`btn btn-gold btn-sm ${styles.footerCta}`}>
+              Apply for Admission
+            </Link>
           </div>
         </div>
 
-        <address className={styles.column} style={{ fontStyle: 'normal' }}>
-          <h3>Contact Us</h3>
-          <div className={styles.contactItem}>
-            <Phone size={16} /> <a href={site.phoneHref}>{site.phone}</a>
-          </div>
-          <div className={styles.contactItem}>
-            <Mail size={16} /> <a href={`mailto:${site.email}`}>{site.email}</a>
-          </div>
-          <div className={styles.contactItem} style={{ alignItems: 'flex-start' }}>
-            <MapPin size={16} style={{ marginTop: '3px', flexShrink: 0 }} />
-            <span>{site.address.locality}, Dist. {site.address.district}<br />{site.address.region} {site.address.postalCode}, {site.address.country}</span>
-          </div>
-        </address>
-
-        <div className={styles.column}>
-          <h3>School Hours</h3>
-          <div className={styles.contactItem}>
-            <Clock size={16} /> <span>{site.hours.label}</span>
-          </div>
-          <div className={styles.contactItem} style={{ opacity: 0.55 }}>
-            <Clock size={16} /> <span>{site.hours.closedLabel}</span>
-          </div>
-          <div className={styles.navLinks}>
-            <Link href="/" className={styles.navLink}>Home</Link>
-            <Link href="/about" className={styles.navLink}>About</Link>
-            <Link href="/programs" className={styles.navLink}>Programs</Link>
-            <Link href="/admissions" className={styles.navLink}>Admissions</Link>
-            <Link href="/gallery" className={styles.navLink}>Gallery</Link>
-            <Link href="/contact" className={styles.navLink}>Contact</Link>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.bottomBar}>
-        <p>© {new Date().getFullYear()} {site.fullName}. All rights reserved.</p>
-        <div className={styles.bottomLinks}>
-          <Link href="#" className={styles.link}>Privacy Policy</Link>
-          <Link href="#" className={styles.link}>Terms of Service</Link>
+        <div className={styles.bottomBar}>
+          <p>© {new Date().getFullYear()} {site.fullName}. All rights reserved.</p>
+          <p>{site.address.locality} &middot; {site.address.district} &middot; {site.address.region}</p>
         </div>
       </div>
     </footer>

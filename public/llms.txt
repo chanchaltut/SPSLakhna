@@ -1,17 +1,20 @@
 # Swagat Public School, Lakhna (SPS Lakhna)
 
-> Swagat Public School (also written SPS Lakhna) is a kindergarten and primary school in Lakhna, Nuapada district, Odisha, India. It teaches children from Nursery to Class 5 in a caring, activity-based environment. "Swagat" means "welcome", and the school's motto is "Where Every Child is Welcome".
+> Swagat Public School (also written SPS Lakhna) is a kindergarten and primary school in Lakhna, Nuapada district, Odisha, India, established in 2024. It teaches children from Nursery to Class 5 in a caring, activity-based environment. "Swagat" means "welcome", and the school's motto is "Where Every Child is Welcome".
 
 ## Key facts
 - **Name:** Swagat Public School
 - **Also known as:** SPS Lakhna, Swagat Public School Lakhna
+- **Established:** 2024
 - **Type:** Kindergarten and primary school (co-educational)
 - **Classes:** Nursery, LKG, UKG, Class 1 to Class 5
 - **Location:** Lakhna, Nuapada district, Odisha 766105, India
+- **Areas served:** Lakhna and nearby parts of Nuapada district, including Nuapada, Khariar Road, Komna and Khariar
 - **Website:** https://spslakhna.in
-- **Email:** contact@spslakhna.in
-- **Phone:** +91 98765 43210
+- **Phone and WhatsApp:** +91 84579 69611 (https://wa.me/918457969611)
+- **Email:** swagatlakhna24@gmail.com
 - **Hours:** Monday to Saturday, 8:00 AM to 2:00 PM. Closed on Sundays.
+- **Logo:** https://spslakhna.in/images/sps-seal.svg (a gold lotus rising from an open book on a purple seal)
 
 ## Academic programs
 - **Early Years (Nursery, LKG, UKG):** Ages 3 to 6. Play-based learning, sensory development, basic phonics and numeracy, and social skills. Classes finish at 12:00 PM.
@@ -24,18 +27,20 @@
 - Safe, child-friendly classrooms
 
 ## Admissions
-Parents apply through the online form at https://spslakhna.in/admissions, visit the school to meet the teachers, and then receive confirmation of enrolment. Nursery admission is for children aged 3 to 4 years.
+Admissions are open for Nursery to Class 5. Parents fill in the application form at https://spslakhna.in/admissions (it is sent to the school office on WhatsApp), visit the school to meet the teachers, and then receive confirmation of enrolment. Nursery admission is for children aged 3 to 4 years, LKG 4 to 5, UKG 5 to 6.
 
 ## Pages
 - [Home](https://spslakhna.in/): Overview, programs, FAQs and map
-- [About](https://spslakhna.in/about): The school's story and values
+- [About](https://spslakhna.in/about): The school's story, values and key facts
 - [Programs](https://spslakhna.in/programs): Classes, curriculum and daily schedule
-- [Admissions](https://spslakhna.in/admissions): Online application form
+- [Admissions](https://spslakhna.in/admissions): Application form and admission steps
 - [Gallery](https://spslakhna.in/gallery): Photos of school life
 - [Blog](https://spslakhna.in/blog): News and articles from teachers
-- [Contact](https://spslakhna.in/contact): Phone, email, address and directions
+- [Contact](https://spslakhna.in/contact): Phone, WhatsApp, email, address and directions
+- [Full details for AI assistants](https://spslakhna.in/llms-full.txt)
 
 ## Common questions
 - **Where is Swagat Public School?** In Lakhna, Nuapada district, Odisha 766105.
-- **Which classes does it offer?** Nursery to Class 5.
-- **How do I apply?** Use the online form on the Admissions page, or call or email the school.
+- **Which school in Lakhna teaches Nursery to Class 5?** Swagat Public School, established 2024.
+- **Which classes does it offer?** Nursery, LKG, UKG and Class 1 to 5.
+- **How do I apply?** Use the form on the Admissions page, or call or WhatsApp +91 84579 69611.

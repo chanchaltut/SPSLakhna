@@ -9,49 +9,44 @@
   width: 52px;
   height: 52px;
   flex-shrink: 0;
+  display: block;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .name {
-  font-family: var(--font-baloo);
-  font-weight: 800;
-  font-size: 24px;
-  letter-spacing: -0.2px;
-  color: var(--color-teal);
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: var(--purple-800);
   white-space: nowrap;
 }
 
-.swagat {
-  color: var(--color-primary);
-}
-
 .place {
-  font-family: var(--font-lato);
-  font-weight: 900;
-  font-size: 10.5px;
-  letter-spacing: 2.6px;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-accent-dark);
+  color: var(--gold-700);
+  white-space: nowrap;
 }
 
-/* Compact size */
-.sm .mark { width: 42px; height: 42px; }
-.sm .name { font-size: 19px; }
-.sm .place { font-size: 9px; letter-spacing: 2.2px; }
-.sm .text { gap: 4px; }
+.sm .mark { width: 44px; height: 44px; }
+.sm .name { font-size: 18.5px; }
+.sm .place { font-size: 9px; }
+.sm .text { gap: 5px; }
 
-/* On dark / coloured surfaces */
-.light .name,
-.light .swagat { color: #FFFFFF; }
-.light .place { color: var(--color-accent); }
+.light .name { color: #fff; }
+.light .place { color: var(--gold-300); }
 
 @media (max-width: 480px) {
   .md .mark { width: 44px; height: 44px; }
-  .md .name { font-size: 19px; }
-  .md .place { font-size: 9px; letter-spacing: 2.2px; }
+  .md .name { font-size: 17.5px; }
+  .md .place { font-size: 8.5px; letter-spacing: 0.16em; }
 }
