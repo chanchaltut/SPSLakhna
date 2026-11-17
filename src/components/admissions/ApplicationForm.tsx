@@ -7,8 +7,7 @@ import { site, whatsappLink } from '@/lib/site';
 import styles from './ApplicationForm.module.css';
 
 const classes = [
-  'Nursery (3–4 years)', 'LKG (4–5 years)', 'UKG (5–6 years)',
-  'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5',
+  'Nursery (3–4 years)', 'LKG (4–5 years)', 'UKG (5–6 years)', 'Class 1 (6–7 years)',
 ];
 
 /**

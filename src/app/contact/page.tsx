@@ -1,6 +1,6 @@
 import React from 'react';
 import { pageMetadata } from '@/lib/seo';
-import { Phone, Mail, MapPin, Clock, Navigation } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Navigation, Instagram } from 'lucide-react';
 import GoogleMapEmbed from '@/components/ui/GoogleMapEmbed';
 import PageHeader from '@/components/ui/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
@@ -11,7 +11,7 @@ import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Contact Us',
-  `Contact Swagat Public School, Lakhna, Nuapada, Odisha ${site.address.postalCode}. Call or WhatsApp ${site.phone}, email ${site.email}. School hours and directions on Google Maps.`,
+  `Contact Swagat Public School, Purna Basti, Lakhna, Komna block, Nuapada, Odisha ${site.address.postalCode}. Call or WhatsApp ${site.phone}, call ${site.phone2}, email ${site.email}. Hours and directions.`,
   '/contact',
 );
 
@@ -43,6 +43,16 @@ export default function ContactPage() {
               <Mail size={22} strokeWidth={1.7} />
               <span className={styles.infoLabel}>Email</span>
               <span className={styles.infoValue}>{site.email}</span>
+            </a>
+            <a href={site.phone2Href} className={styles.infoCard}>
+              <Phone size={22} strokeWidth={1.7} />
+              <span className={styles.infoLabel}>Phone (second number)</span>
+              <span className={styles.infoValue}>{site.phone2}</span>
+            </a>
+            <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className={styles.infoCard}>
+              <Instagram size={22} strokeWidth={1.7} />
+              <span className={styles.infoLabel}>Instagram</span>
+              <span className={styles.infoValue}>{site.instagramHandle}</span>
             </a>
             <div className={styles.infoCard}>
               <Clock size={22} strokeWidth={1.7} />

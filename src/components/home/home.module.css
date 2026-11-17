@@ -99,7 +99,7 @@
 
 .heroImage {
   object-fit: cover;
-  object-position: 64% center;
+  object-position: center;
 }
 
 .heroSeal {
@@ -251,7 +251,9 @@
 
 .centerAction {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 16px 32px;
   margin-top: clamp(36px, 4vw, 56px);
 }
 
@@ -345,6 +347,40 @@
 .feature p {
   color: var(--ink-soft);
   font-size: 15px;
+}
+
+/* ─── School life ─── */
+.lifeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.lifeShot {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-color: var(--purple-100);
+  box-shadow: var(--shadow-soft);
+}
+
+.lifeShot img {
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.lifeShot:hover img { transform: scale(1.04); }
+
+.lifeShot span {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 40px 16px 14px;
+  background: linear-gradient(to top, rgba(42, 18, 56, 0.85), transparent);
+  color: #fff;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 /* ─── Teachers ─── */
@@ -556,6 +592,7 @@
 
   .featureGrid { grid-template-columns: 1fr 1fr; }
   .teacherGrid { grid-template-columns: 1fr 1fr; }
+  .lifeGrid { grid-template-columns: 1fr 1fr; }
 
   .steps { grid-template-columns: 1fr; }
 }

@@ -2,24 +2,25 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  ArrowRight, Plus, Users, Puzzle, ShieldCheck, Apple, Palette, Handshake,
-  MapPin, Phone, Mail, Clock, Navigation,
+  ArrowRight, Plus, Users, BookOpen, ShieldCheck, Flower2, Music, Flag,
+  MapPin, Phone, Mail, Clock, Navigation, Instagram,
 } from 'lucide-react';
 import { LogoMark } from '@/components/ui/Logo';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton';
 import GoogleMapEmbed from '@/components/ui/GoogleMapEmbed';
 import { site, whatsappLink, defaultWhatsappText } from '@/lib/site';
 import { faqs } from '@/lib/faqs';
-import { programs, teachers } from '@/lib/content';
+import { programs, staff, founder, director } from '@/lib/content';
+import { featured, photoBySrc } from '@/lib/gallery';
 import styles from './home.module.css';
 
 /* ─── Hero ─── */
 export function Hero() {
   const facts = [
     { value: site.founded, label: 'Established' },
-    { value: 'Nursery – 5', label: 'Classes offered' },
-    { value: '1 : 15', label: 'Teacher : students' },
-    { value: 'Mon – Sat', label: '8 AM to 2 PM' },
+    { value: 'Nursery – 1', label: 'Classes running now' },
+    { value: 'Class 8', label: 'Permitted up to' },
+    { value: 'English', label: 'Medium, CBSE pattern' },
   ];
 
   return (
@@ -35,9 +36,9 @@ export function Hero() {
             </span>
           </h1>
           <p className={`lead ${styles.heroLead}`}>
-            A welcoming kindergarten and primary school in the heart of {site.address.locality},{' '}
-            {site.address.district} — where every child from Nursery to Class 5 gets personal attention
-            and a joyful, purposeful education.
+            An English-medium, CBSE-pattern school in {site.address.area}, {site.address.locality}{' '}
+            ({site.address.district}, {site.address.region}) — where every child from {site.grades} gets personal
+            attention and a joyful, purposeful education. The school is permitted to teach up to Class 8.
           </p>
 
           <div className={styles.heroActions}>
@@ -62,8 +63,8 @@ export function Hero() {
         <figure className={styles.heroFigure}>
           <div className={styles.heroArch}>
             <Image
-              src="/images/hero-classroom.webp"
-              alt={`Children drawing and learning with their teacher in a classroom at ${site.fullName}, ${site.address.district}`}
+              src={featured.hero}
+              alt={`Students in school uniform in their classroom at ${site.fullName}, ${site.address.district}, ${site.address.region}`}
               fill
               priority
               sizes="(max-width: 960px) 92vw, 520px"
@@ -92,8 +93,8 @@ export function About() {
         <div className={styles.aboutMedia}>
           <div className={styles.aboutImage}>
             <Image
-              src="/images/gallery/reading.jpg"
-              alt={`Story time with a teacher at ${site.fullName}`}
+              src={featured.about}
+              alt={`Students lining up outside the school building of ${site.fullName} in ${site.address.area}, ${site.address.locality}`}
               fill
               sizes="(max-width: 960px) 92vw, 540px"
               style={{ objectFit: 'cover' }}
@@ -115,6 +116,12 @@ export function About() {
               We believe early childhood is a time of wonder, discovery and rapid growth. Our mission is to
               create a safe and inspiring environment where children feel confident to explore, ask questions
               and express themselves freely.
+            </p>
+            <p>
+              Founded in {site.founded} by <strong>{founder.name}</strong> and directed by{' '}
+              <strong>{director.name}</strong>, {site.name} is a co-educational, English-medium school that
+              follows the CBSE pattern. Classes run from {site.grades} today, and the school is permitted to
+              teach up to Class 8.
             </p>
             <p>
               We combine structured learning with play-based activities to support each child&rsquo;s
@@ -169,8 +176,8 @@ export function Programs() {
             <h2 className="title">Tailored learning for <em>every age</em></h2>
           </div>
           <p className="lead">
-            From Nursery to Class 5, each stage is planned around what children of that age need — so
-            every child&rsquo;s abilities are noticed and supported.
+            From Nursery to Class 1 today — and up to Class 8 as the school grows — each stage is planned
+            around what children of that age need, so every child&rsquo;s abilities are noticed and supported.
           </p>
         </div>
 
@@ -201,12 +208,12 @@ export function Programs() {
 
 /* ─── Features ─── */
 const features = [
-  { icon: Users, title: 'Small class sizes', desc: 'With fewer children in each class, teachers can focus on every little learner and help them build confidence.' },
-  { icon: Puzzle, title: 'Play-based curriculum', desc: 'Games, stories and hands-on activities let children explore new ideas through play, imagination and curiosity.' },
-  { icon: ShieldCheck, title: 'Safe, cheerful classrooms', desc: 'Bright, child-friendly rooms designed with comfort and safety in mind.' },
-  { icon: Apple, title: 'Healthy snacks', desc: 'Balanced snacks that keep growing bodies and curious minds full of energy.' },
-  { icon: Palette, title: 'Creative activities', desc: 'Art, music and movement develop fine motor skills and confidence in every child.' },
-  { icon: Handshake, title: 'Friendship and kindness', desc: 'Group activities and guided play teach children to share, care and work together.' },
+  { icon: BookOpen, title: 'English medium, CBSE pattern', desc: 'A co-educational English-medium school that follows the CBSE pattern, from Nursery to Class 1 now and permitted up to Class 8.' },
+  { icon: Users, title: 'Qualified, caring staff', desc: 'A founder, director and teaching team who know every child by name, with flexible and affordable sessions for families.' },
+  { icon: ShieldCheck, title: 'Safe and secure', desc: 'Bright, child-friendly classrooms in Purna Basti, Lakhna, with a play corner for the youngest learners.' },
+  { icon: Flower2, title: 'Yoga and meditation', desc: 'Regular yoga and meditation sessions help children settle, focus and stay healthy.' },
+  { icon: Music, title: 'Dance, song and drawing', desc: 'Dance, song, drawing, essay writing and GK quiz classes build confidence alongside academics.' },
+  { icon: Flag, title: 'Festivals and national days', desc: "Independence Day, Janmashtami, Ganesh Puja, Children's Day and Gandhi Jayanti are celebrated together every year." },
 ];
 
 export function Features() {
@@ -232,6 +239,54 @@ export function Features() {
   );
 }
 
+/* ─── School life ─── */
+export function SchoolLife() {
+  return (
+    <section className="section surface-cream">
+      <div className="container">
+        <div className={styles.splitHead}>
+          <div>
+            <span className="eyebrow">School life</span>
+            <h2 className="title">A year of <em>celebrations and learning</em></h2>
+          </div>
+          <p className="lead">
+            Real moments from {site.name}, {site.address.locality} — national days, festivals, yoga, art and
+            everyday classroom life.
+          </p>
+        </div>
+
+        <div className={styles.lifeGrid}>
+          {featured.home.map((src) => {
+            const p = photoBySrc(src);
+            return (
+              <Link key={src} href={`/gallery#${p.album.id}`} className={styles.lifeShot}>
+                <Image
+                  src={src}
+                  alt={`${p.alt} at ${site.fullName}`}
+                  fill
+                  sizes="(max-width: 720px) 50vw, 25vw"
+                />
+                <span>{p.album.title}</span>
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className={styles.centerAction}>
+          <Link href="/gallery" className="text-link">
+            See the full photo gallery <ArrowRight size={16} />
+          </Link>
+          {site.socials.instagram && (
+            <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-link">
+              <Instagram size={16} /> Follow {site.instagramHandle} on Instagram
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─── Teachers ─── */
 export function Teachers() {
   return (
@@ -240,17 +295,17 @@ export function Teachers() {
         <div className={styles.splitHead}>
           <div>
             <span className="eyebrow">Our team</span>
-            <h2 className="title">Teachers who know <em>every child by name</em></h2>
+            <h2 className="title">The people who know <em>every child by name</em></h2>
           </div>
           <p className="lead">
-            Warm, experienced educators who understand the strengths of each child and give them
-            personal attention every day.
+            {site.name} is led by its founder, {founder.name}, and director, {director.name}, with a
+            teaching and support team who give each child personal attention every day.
           </p>
         </div>
 
         <div className={styles.teacherGrid}>
-          {teachers.map((t) => (
-            <article key={t.name} className={`card ${styles.teacher}`}>
+          {staff.map((t) => (
+            <article key={t.id} id={t.id} className={`card ${styles.teacher}`}>
               <span className={styles.monogram} aria-hidden="true">{t.initials}</span>
               <h3>{t.name}</h3>
               <span className={styles.role}>{t.role}</span>
@@ -362,6 +417,10 @@ export function Visit() {
               <Phone size={18} />
               <span><small>Phone and WhatsApp</small>{site.phone}</span>
             </a>
+            <a href={site.phone2Href}>
+              <Phone size={18} />
+              <span><small>Phone (second number)</small>{site.phone2}</span>
+            </a>
             <a href={`mailto:${site.email}`}>
               <Mail size={18} />
               <span><small>Email</small>{site.email}</span>
@@ -370,6 +429,10 @@ export function Visit() {
               <Clock size={18} />
               <span><small>School hours</small>{site.hours.label}</span>
             </div>
+            <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer">
+              <Instagram size={18} />
+              <span><small>Instagram</small>{site.instagramHandle}</span>
+            </a>
           </address>
 
           <a href={site.maps.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">

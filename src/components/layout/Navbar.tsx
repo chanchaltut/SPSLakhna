@@ -15,7 +15,7 @@ const navItems = [
   { label: 'Programs', href: '/programs' },
   { label: 'Admissions', href: '/admissions' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'News', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 

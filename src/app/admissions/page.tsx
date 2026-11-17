@@ -10,7 +10,7 @@ import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Admissions',
-  'Apply for admission to Swagat Public School, Lakhna. Online application for Nursery, LKG, UKG and Class 1 to 5 in Nuapada district, Odisha. Call or WhatsApp +91 84579 69611.',
+  'Apply for admission to Swagat Public School, Lakhna — English-medium, CBSE-pattern school in Nuapada, Odisha. Nursery, LKG, UKG and Class 1 admissions open. Call or WhatsApp +91 84579 69611.',
   '/admissions',
 );
 
@@ -24,7 +24,7 @@ const ages = [
   ['Nursery', '3 – 4 years'],
   ['LKG', '4 – 5 years'],
   ['UKG', '5 – 6 years'],
-  ['Class 1 – 5', '6 – 11 years'],
+  ['Class 1', '6 – 7 years'],
 ];
 
 export default function AdmissionsPage() {
@@ -35,7 +35,7 @@ export default function AdmissionsPage() {
         crumb="Admissions"
         eyebrow="Admissions open"
         title={<>Join the <em>Swagat family</em></>}
-        lead={`Begin your child's journey at ${site.fullName} — a place where curiosity, care and confidence grow together. Admissions are open for ${site.grades}.`}
+        lead={`Begin your child's journey at ${site.fullName} — a place where curiosity, care and confidence grow together. Admissions are open for ${site.grades}; the school is permitted to run classes up to Class 8.`}
       />
 
       <section className="section surface-paper">
@@ -66,6 +66,7 @@ export default function AdmissionsPage() {
 
             <div className={styles.contactLinks}>
               <a href={site.phoneHref} className="btn btn-outline btn-sm"><Phone size={16} /> {site.phone}</a>
+              <a href={site.phone2Href} className="btn btn-outline btn-sm"><Phone size={16} /> {site.phone2}</a>
               <a href={whatsappLink(defaultWhatsappText)} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
                 <WhatsAppIcon size={16} /> WhatsApp
               </a>

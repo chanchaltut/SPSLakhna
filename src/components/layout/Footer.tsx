@@ -12,7 +12,7 @@ const links = [
   { label: 'Programs', href: '/programs' },
   { label: 'Admissions', href: '/admissions' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'School News', href: '/blog' },
   { label: 'Contact', href: '/contact' },
   { label: 'FAQs', href: '/#faq' },
 ];
@@ -33,8 +33,8 @@ export default function Footer() {
             <p className={styles.brandName}>{site.name}</p>
             <p className={styles.tagline}>{site.tagline}</p>
             <p className={styles.text}>
-              A kindergarten and primary school in {site.address.locality}, {site.address.district} district, {site.address.region},
-              teaching {site.grades} since {site.founded}.
+              An English-medium, CBSE-pattern school in {site.address.area}, {site.address.locality}, {site.address.district} district,
+              {site.address.region}. Teaching {site.grades} since {site.founded}; permitted up to Class 8.
             </p>
             <div className={styles.socials}>
               <a
@@ -74,14 +74,21 @@ export default function Footer() {
                 </span>
               </li>
               <li>
+                <Phone size={16} />
+                <span>
+                  <a href={site.phone2Href}>{site.phone2}</a>
+                  <small>Call</small>
+                </span>
+              </li>
+              <li>
                 <Mail size={16} />
                 <a href={`mailto:${site.email}`}>{site.email}</a>
               </li>
               <li>
                 <MapPin size={16} />
                 <a href={site.maps.link} target="_blank" rel="noopener noreferrer">
-                  {site.address.locality}, Dist. {site.address.district},<br />
-                  {site.address.region} {site.address.postalCode}, {site.address.country}
+                  {site.address.area}, {site.address.locality}, Block {site.address.block},<br />
+                  Dist. {site.address.district}, {site.address.region} {site.address.postalCode}
                 </a>
               </li>
             </ul>

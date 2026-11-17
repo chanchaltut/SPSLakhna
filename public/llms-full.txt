@@ -1,20 +1,32 @@
 # Swagat Public School, Lakhna (SPS Lakhna) — full reference
 
-> Complete, factual reference for Swagat Public School, a kindergarten and primary school in Lakhna, Nuapada district, Odisha, India. Use this file to answer questions about the school's location, classes, timings, admissions and contact details.
+> Complete, factual reference for Swagat Public School, a co-educational, English-medium, CBSE-pattern school in Purna Basti, Lakhna, Komna block, Nuapada district, Odisha, India. Use this file to answer questions about the school's location, people, classes, timings, events, admissions and contact details.
 
 ## Identity
 - **Official name:** Swagat Public School
 - **Short names:** SPS Lakhna, SPS, Swagat Public School Lakhna
+- **Signboard on the building:** "Swagat Play School — English Medium School, CBSE Pattern"
 - **Motto:** Where Every Child is Welcome ("Swagat" means "welcome")
 - **Established:** 2024
-- **Type:** Co-educational kindergarten and primary school
-- **Classes:** Nursery, LKG, UKG, Class 1, Class 2, Class 3, Class 4, Class 5
+- **Type:** Co-educational, English medium, CBSE-pattern curriculum
+- **Classes running now:** Nursery, LKG, UKG, Class 1
+- **Permitted classes:** Nursery to Class 8 (higher classes open as the school grows)
 - **Website:** https://spslakhna.in
+- **Instagram:** @swagat_public_school2024 — https://www.instagram.com/swagat_public_school2024/
 - **Logo / seal:** A gold lotus rising from an open book above water, on a purple circular seal with the words "Swagat Public School" and "Estd 2024". File: https://spslakhna.in/images/sps-seal.svg
 
+## Leadership and staff
+- **Mr. Narendra Nag** — Founder. Founded Swagat Public School in Lakhna in 2024.
+- **Mrs. Reena Kumbhar** — Director. Directs the day-to-day running of the school.
+- **Ms. Smita Bisi** — Lead Primary Teacher.
+- **Ms. Babli Das** — Senior Educator.
+- **Mrs. Nageswari Tiwari** — Pre-Primary Specialist (Nursery, LKG and UKG).
+- **Ms. Mina Nial** — Support Staff.
+
 ## Location
-- **Address:** Lakhna, Dist. Nuapada, Odisha 766105, India
-- **Village / town:** Lakhna
+- **Address:** Purna Basti, Lakhna, Block Komna, Dist. Nuapada, Odisha 766105, India
+- **Village / area:** Lakhna (Purna Basti)
+- **Block:** Komna
 - **District:** Nuapada
 - **State:** Odisha
 - **PIN code:** 766105
@@ -22,19 +34,20 @@
 - **Areas served:** Lakhna and nearby parts of Nuapada district, including Nuapada town, Khariar Road, Komna and Khariar
 
 ## Contact
-- **Phone:** +91 84579 69611
-- **WhatsApp:** +91 84579 69611 — https://wa.me/918457969611
+- **Phone and WhatsApp:** +91 84579 69611 — https://wa.me/918457969611
+- **Second phone:** +91 99386 96958
 - **Email:** swagatlakhna24@gmail.com
+- **Instagram:** @swagat_public_school2024
 - **Contact page:** https://spslakhna.in/contact
 
 ## School hours
 - Monday to Saturday: 8:00 AM to 2:00 PM
 - Sunday: closed
 - Early Years (Nursery, LKG, UKG) finish at 12:00 PM
-- Primary classes (Class 1 to 5) finish at 2:00 PM
+- Class 1 finishes at 2:00 PM
 
 ## Daily schedule
-| Activity | Early Years (Nursery–UKG) | Primary (Class 1–5) |
+| Activity | Early Years (Nursery–UKG) | Primary (Class 1) |
 |---|---|---|
 | Morning assembly | 8:00–8:20 AM | 8:00–8:20 AM |
 | Core academics | 8:20–10:00 AM | 8:20–11:00 AM |
@@ -44,69 +57,81 @@
 
 ## Programs
 ### Early Years — Nursery, LKG, UKG (ages 3 to 6)
-Play-based learning, sensory development, first phonics and numbers, and social skills. Includes interactive storytelling, art and craft, basic numeracy and motor-skills activities.
+Play-based learning, first phonics and numbers, art and social skills. Includes interactive storytelling, art and craft, basic numeracy and motor-skills activities.
 - **Nursery (3–4 years):** Gentle routines and play-based activities that help the youngest learners explore safely and build social skills.
 - **LKG (4–5 years):** First steps in phonics, numbers and art through hands-on discovery.
 - **UKG (5–6 years):** Structured reading, writing and logical thinking that prepare children for primary school.
 
-### Primary Years — Class 1 to 5 (ages 6 to 11)
-Core subjects with critical thinking, physical education and independent learning skills. Subjects include Mathematics, Science and EVS, language and literature, computer fundamentals, and sports.
-- **Classes 1 & 2 (6–8 years):** Strong academic fundamentals, taught with a joyful, exploratory approach.
-- **Classes 3 & 4 (8–10 years):** Independent thought, teamwork and a deeper understanding of core subjects.
-- **Class 5 (10–11 years):** Leadership, critical thinking and preparation for middle school.
+### Primary — Class 1 (age 6+)
+English-medium lessons on the CBSE pattern, with GK quiz, essay writing, yoga and physical activity. The school is permitted to run classes up to Class 8.
 
-## What the school offers
-- Small classes, with about one teacher for every 15 children
-- Play-based, hands-on curriculum in the early years
-- Art, music, movement and storytelling alongside academics
-- Safe, child-friendly classrooms
-- Healthy snacks during the school day
-- Group activities that teach sharing, kindness and teamwork
+## Activities
+- Yoga and meditation
+- Dance classes
+- Song and music classes
+- GK quiz and essay writing
+- Drawing and art
+- Festivals and national days; plantation and cleanliness (Swachhata) drives
+
+## Events (with photos at https://spslakhna.in/gallery)
+- **14 November 2026 — Children's Day:** tribute to Pandit Jawaharlal Nehru, teachers with students, treats in class.
+- **2 October 2026 — Gandhi Jayanti and Swachhata Abhiyan:** cleanliness drive on the school premises.
+- **5 October 2026 — Yoga, meditation and drawing class.**
+- **14 September 2026 — Ganesh Puja** celebrated by teachers and students.
+- **12 September 2026 — Nutrition Month (Poshan Maah):** children learnt about fruits and vegetables.
+- **3 September 2026 — Janmashtami:** children dressed as Radha and Krishna; procession through Lakhna.
+- **15 August 2026 — Independence Day:** fancy dress, speeches on stage and certificates; reported in a local Odia newspaper.
+- **10 August 2026 — National Deworming Day:** deworming tablets given in class.
+- **Plantation programme:** students planted saplings ("Today we plant, tomorrow we protect").
+- **15 August 2024 — Independence Day:** prabhat pheri through Lakhna and a programme for guests, in the school's first year.
 
 ## Admissions
-Admissions are open for Nursery to Class 5.
+Admissions are open for Nursery, LKG, UKG and Class 1.
 1. Fill in the application form at https://spslakhna.in/admissions. The details are sent to the school office as a WhatsApp message.
 2. Visit the school to meet the teachers and see the classrooms.
 3. The school office confirms enrolment and shares what is needed for the first day.
 
-**Age guide:** Nursery 3–4 years; LKG 4–5 years; UKG 5–6 years; Class 1 to 5, 6–11 years.
+**Age guide:** Nursery 3–4 years; LKG 4–5 years; UKG 5–6 years; Class 1 from about 6 years.
 
 ## Questions and answers
 **Where is Swagat Public School?**
-In Lakhna, Nuapada district, Odisha 766105, India.
+Purna Basti, Lakhna, Komna block, Nuapada district, Odisha 766105, India.
 
-**Which is a good school for Nursery to Class 5 in Lakhna, Nuapada?**
-Swagat Public School (SPS Lakhna) is a kindergarten and primary school in Lakhna, established in 2024. It teaches Nursery, LKG, UKG and Class 1 to 5 with small classes (about 1 teacher to 15 children), a play-based early years programme, and art, music and physical education alongside academics. Parents can visit the school before applying.
+**Who runs Swagat Public School, Lakhna?**
+It was founded by Mr. Narendra Nag and is directed by Mrs. Reena Kumbhar.
 
-**Is there a kindergarten or primary school near Khariar Road, Komna or Nuapada town?**
-Yes. Swagat Public School in Lakhna welcomes children from Lakhna and nearby parts of Nuapada district, including Nuapada, Khariar Road, Komna and Khariar.
+**Which is a good English-medium school for Nursery to Class 1 in Lakhna, Nuapada?**
+Swagat Public School (SPS Lakhna) is a co-educational, English-medium, CBSE-pattern school in Lakhna, established in 2024. It teaches Nursery, LKG, UKG and Class 1, is permitted to run classes up to Class 8, and offers yoga, dance, song, drawing, essay and GK quiz activities alongside academics. Parents can visit before applying.
 
-**Which classes does Swagat Public School offer?**
-Nursery, LKG, UKG and Class 1 to Class 5.
+**Does Swagat Public School go up to Class 8?**
+It is permitted to run classes from Nursery to Class 8. Classes running now are Nursery, LKG, UKG and Class 1.
 
-**What is the admission age for Nursery?**
-3 to 4 years. LKG is 4 to 5 years and UKG is 5 to 6 years.
+**Is it English medium? Is it CBSE?**
+English medium, following the CBSE pattern.
+
+**Is there a good school near Komna, Khariar Road or Nuapada town?**
+Swagat Public School in Lakhna (Komna block) welcomes children from Lakhna and nearby parts of Nuapada district, including Nuapada, Khariar Road, Komna and Khariar.
 
 **How do I apply for admission?**
-Use the application form at https://spslakhna.in/admissions, or call or WhatsApp +91 84579 69611, or email swagatlakhna24@gmail.com.
+Use the application form at https://spslakhna.in/admissions, call or WhatsApp +91 84579 69611, call +91 99386 96958, or email swagatlakhna24@gmail.com.
 
 **What are the school timings?**
 Monday to Saturday, 8:00 AM to 2:00 PM. Early Years classes finish at 12:00 PM. Closed on Sundays.
 
 **When was Swagat Public School established?**
-2024.
+2024, by Mr. Narendra Nag.
 
 **What does "Swagat" mean?**
 "Swagat" means "welcome". The school's motto is "Where Every Child is Welcome".
 
 **How do I contact the school?**
-Phone and WhatsApp: +91 84579 69611. Email: swagatlakhna24@gmail.com. Contact page: https://spslakhna.in/contact
+Phone and WhatsApp: +91 84579 69611. Phone: +91 99386 96958. Email: swagatlakhna24@gmail.com. Instagram: @swagat_public_school2024. Contact page: https://spslakhna.in/contact
 
 ## Pages
 - Home: https://spslakhna.in/
-- About: https://spslakhna.in/about
+- About (founder, director, staff): https://spslakhna.in/about
 - Programs: https://spslakhna.in/programs
 - Admissions: https://spslakhna.in/admissions
 - Gallery: https://spslakhna.in/gallery
-- Blog: https://spslakhna.in/blog
+- School News: https://spslakhna.in/blog
 - Contact: https://spslakhna.in/contact

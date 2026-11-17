@@ -4,13 +4,13 @@ import { pageMetadata } from '@/lib/seo';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import CTABand from '@/components/ui/CTABand';
-import { programs } from '@/lib/content';
+import { programs, activities } from '@/lib/content';
 import { site } from '@/lib/site';
 import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Academic Programs',
-  'Early Years (Nursery, LKG, UKG) and Primary Years (Class 1 to 5) programmes at Swagat Public School, Lakhna, Nuapada, with daily schedule and timings.',
+  'Nursery, LKG, UKG and Class 1 at Swagat Public School, Lakhna, Nuapada — English medium, CBSE pattern, permitted up to Class 8. Activities, daily schedule and timings.',
   '/programs',
 );
 
@@ -25,15 +25,15 @@ const stages = [
   {
     icon: Brain,
     title: 'Primary Years',
-    meta: 'Class 1 to 5 — Ages 6 to 11',
-    desc: 'Core subjects taught alongside critical thinking, physical education and the habits of independent learning.',
-    points: ['Maths, Science and EVS', 'Language and literature', 'Computer fundamentals', 'Sports and physical education'],
+    meta: 'Class 1 now, permitted up to Class 8 — Ages 6+',
+    desc: 'English-medium lessons on the CBSE pattern, taught alongside critical thinking, physical activity and the habits of independent learning.',
+    points: ['English and Maths', 'EVS', 'GK quiz and essay writing', 'Yoga and physical activity'],
   },
 ];
 
 const stats = [
-  { value: '8', label: 'Class levels, Nursery to Class 5' },
-  { value: '1:15', label: 'Teacher-to-student ratio' },
+  { value: '4', label: 'Classes now: Nursery, LKG, UKG, Class 1' },
+  { value: 'Class 8', label: 'Permitted to teach up to' },
   { value: '6', label: 'School days a week, Mon to Sat' },
   { value: site.founded, label: `Established in ${site.address.locality}` },
 ];
@@ -54,7 +54,7 @@ export default function ProgramsPage() {
         crumb="Programs"
         eyebrow="What we offer"
         title={<>Learning that grows <em>with your child</em></>}
-        lead={`From Nursery to Class 5, the curriculum at ${site.fullName} is designed to spark curiosity and build a strong foundation for lifelong learning.`}
+        lead={`From Nursery to Class 1 today — and up to Class 8 as the school grows — the English-medium, CBSE-pattern curriculum at ${site.fullName} is designed to spark curiosity and build a strong foundation.`}
       />
 
       <section className="section surface-paper">
@@ -100,10 +100,30 @@ export default function ProgramsPage() {
               </li>
             ))}
           </ul>
+          <p className={styles.mt} style={{ maxWidth: 760, color: 'var(--ink-soft)' }}>
+            <strong>Higher classes:</strong> {site.name} has permission to run classes from {site.gradesPermitted}.
+            Classes beyond Class 1 will open as the school grows — call {site.phone} to ask about a specific class.
+          </p>
         </div>
       </section>
 
       <section className="section surface-paper">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Beyond the classroom</span>
+            <h2 className="title">Activities every child <em>takes part in</em></h2>
+          </div>
+          <ul className={styles.checkList}>
+            {activities.map((a) => (
+              <li key={a}><Check size={17} strokeWidth={2.4} /> {a}</li>
+            ))}
+            <li><Check size={17} strokeWidth={2.4} /> Festivals and national days</li>
+            <li><Check size={17} strokeWidth={2.4} /> Plantation and cleanliness drives</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="section surface-cream">
         <div className="container">
           <div className={`card ${styles.tableCard}`}>
             <div className={styles.tableHead}>
@@ -117,7 +137,7 @@ export default function ProgramsPage() {
                   <tr>
                     <th scope="col">Activity</th>
                     <th scope="col">Early Years (Nursery – UKG)</th>
-                    <th scope="col">Primary (Class 1 – 5)</th>
+                    <th scope="col">Primary (Class 1)</th>
                   </tr>
                 </thead>
                 <tbody>

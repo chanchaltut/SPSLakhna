@@ -1,5 +1,5 @@
 import {
-  Hero, About, Pillars, Programs, Features, Teachers, AdmissionSteps, FAQSection, Visit,
+  Hero, About, Pillars, Programs, Features, SchoolLife, Teachers, AdmissionSteps, FAQSection, Visit,
 } from "@/components/home/HomeSections";
 import CTABand from "@/components/ui/CTABand";
 import { FaqJsonLd } from "@/components/seo/JsonLd";
@@ -13,6 +13,7 @@ export default function Home() {
       <Pillars />
       <Programs />
       <Features />
+      <SchoolLife />
       <Teachers />
       <AdmissionSteps />
       <FAQSection />
