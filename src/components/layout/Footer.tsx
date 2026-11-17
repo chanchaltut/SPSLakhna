@@ -118,6 +118,12 @@ export default function Footer() {
         <div className={styles.bottomBar}>
           <p>© {new Date().getFullYear()} {site.fullName}. All rights reserved.</p>
           <p>{site.address.locality} &middot; {site.address.district} &middot; {site.address.region}</p>
+          <p>
+            Designed and developed by{' '}
+            <a href="https://www.codehyphen.in" target="_blank" rel="noopener" className={styles.credit}>
+              Code Hyphen
+            </a>
+          </p>
         </div>
       </div>
     </footer>
