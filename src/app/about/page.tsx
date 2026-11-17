@@ -13,7 +13,7 @@ import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'About Us',
-  `About Swagat Public School, Lakhna — English-medium, CBSE-pattern school in Nuapada, Odisha, founded in ${site.founded} by ${founder.name}. Nursery to Class 1 now, permitted up to Class 8.`,
+  `About Swagat Public School, Lakhna — English-medium, CBSE-pattern school in Nuapada, Odisha, founded in ${site.founded} by ${founder.name}. Nursery to Class 5 now, permitted up to Class 8.`,
   '/about',
 );
 
@@ -124,7 +124,7 @@ export default function AboutPage() {
             <div className={styles.factRow}><dt>Founder</dt><dd>{founder.name}</dd></div>
             <div className={styles.factRow}><dt>Director</dt><dd>{director.name}</dd></div>
             <div className={styles.factRow}><dt>Type</dt><dd>Co-educational, English medium, CBSE-pattern curriculum</dd></div>
-            <div className={styles.factRow}><dt>Classes now</dt><dd>Nursery, LKG, UKG and Class 1</dd></div>
+            <div className={styles.factRow}><dt>Classes now</dt><dd>Nursery, LKG, UKG and Class 1 to Class 5</dd></div>
             <div className={styles.factRow}><dt>Permitted up to</dt><dd>Class 8 (Nursery to Class 8)</dd></div>
             <div className={styles.factRow}><dt>Location</dt><dd><a href={site.maps.link} target="_blank" rel="noopener noreferrer">{site.address.line}, {site.address.country}</a></dd></div>
             <div className={styles.factRow}><dt>Areas served</dt><dd>{site.address.locality}, {nearby}</dd></div>

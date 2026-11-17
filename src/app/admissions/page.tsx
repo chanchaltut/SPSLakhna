@@ -10,7 +10,7 @@ import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Admissions',
-  'Apply for admission to Swagat Public School, Lakhna — English-medium, CBSE-pattern school in Nuapada, Odisha. Nursery, LKG, UKG and Class 1 admissions open. Call or WhatsApp +91 84579 69611.',
+  'Apply for admission to Swagat Public School, Lakhna — English-medium, CBSE-pattern school in Nuapada, Odisha. Nursery, LKG, UKG and Class 1 to 5 admissions open. Call or WhatsApp +91 84579 69611.',
   '/admissions',
 );
 
@@ -24,7 +24,7 @@ const ages = [
   ['Nursery', '3 – 4 years'],
   ['LKG', '4 – 5 years'],
   ['UKG', '5 – 6 years'],
-  ['Class 1', '6 – 7 years'],
+  ['Class 1 – 5', '6 – 11 years'],
 ];
 
 export default function AdmissionsPage() {

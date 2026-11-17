@@ -1,11 +1,13 @@
 /** Shared page content used by the home page, inner pages and structured data. */
 
-/** Classes running now. The school is permitted to run classes up to Class 8 (see site.gradesPermitted). */
+/** Classes running now (Nursery to Class 5). The school is permitted to run classes up to Class 8 (see site.gradesPermitted). */
 export const programs = [
   { title: "Nursery", age: "3 – 4 years", desc: "Gentle routines and play-based activities help the youngest learners explore safely and build social skills." },
   { title: "LKG", age: "4 – 5 years", desc: "First steps in phonics, numbers and art through hands-on discovery." },
   { title: "UKG", age: "5 – 6 years", desc: "Structured reading, writing and logical thinking that prepare children for primary school." },
-  { title: "Class 1", age: "6 – 7 years", desc: "English-medium primary lessons on the CBSE pattern, taught with a joyful, exploratory approach." },
+  { title: "Classes 1 & 2", age: "6 – 8 years", desc: "English-medium primary lessons on the CBSE pattern, building strong reading, writing and number skills with a joyful, exploratory approach." },
+  { title: "Classes 3 & 4", age: "8 – 10 years", desc: "Independent thought, teamwork and a deeper understanding of English, Maths and EVS." },
+  { title: "Class 5", age: "10 – 11 years", desc: "Confidence, critical thinking and solid preparation for the middle classes, which the school is permitted to run up to Class 8." },
 ] as const;
 
 /** Activities named on the school's own admission banner. */
@@ -62,7 +64,7 @@ export const staff: StaffMember[] = [
     honorific: "Ms.",
     role: "Lead Primary Teacher",
     initials: "SB",
-    bio: "Leads teaching in the primary section, where children take their first steps in Class 1.",
+    bio: "Leads teaching in the primary section, from Class 1 to Class 5.",
   },
   {
     id: "babli-das",

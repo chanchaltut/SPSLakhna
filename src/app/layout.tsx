@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     "Swagat Play School Lakhna",
     "Narendra Nag Swagat Public School",
     "Reena Kumbhar Swagat Public School",
+    "Nursery to Class 5 school Lakhna",
     "Nursery to Class 8 school Nuapada",
     "public school Nuapada district",
     "best school in Lakhna",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Swagat Public School, Lakhna | Where Every Child is Welcome",
     description:
-      "English-medium, CBSE-pattern school in Purna Basti, Lakhna, Nuapada, Odisha. Admissions open for Nursery to Class 1; permitted up to Class 8.",
+      "English-medium, CBSE-pattern school in Purna Basti, Lakhna, Nuapada, Odisha. Admissions open for Nursery to Class 5; permitted up to Class 8.",
     url: site.url,
     siteName: site.fullName,
     images: [
@@ -85,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Swagat Public School, Lakhna",
     description:
-      "English-medium, CBSE-pattern school in Lakhna, Nuapada, Odisha. Nursery to Class 1 now, permitted up to Class 8.",
+      "English-medium, CBSE-pattern school in Lakhna, Nuapada, Odisha. Nursery to Class 5 now, permitted up to Class 8.",
     images: [site.ogImage],
   },
   robots: {

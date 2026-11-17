@@ -10,7 +10,7 @@ import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Academic Programs',
-  'Nursery, LKG, UKG and Class 1 at Swagat Public School, Lakhna, Nuapada — English medium, CBSE pattern, permitted up to Class 8. Activities, daily schedule and timings.',
+  'Nursery, LKG, UKG and Class 1 to 5 at Swagat Public School, Lakhna, Nuapada — English medium, CBSE pattern, permitted up to Class 8. Activities, daily schedule and timings.',
   '/programs',
 );
 
@@ -25,14 +25,14 @@ const stages = [
   {
     icon: Brain,
     title: 'Primary Years',
-    meta: 'Class 1 now, permitted up to Class 8 — Ages 6+',
+    meta: 'Class 1 to 5 now, permitted up to Class 8 — Ages 6 to 11',
     desc: 'English-medium lessons on the CBSE pattern, taught alongside critical thinking, physical activity and the habits of independent learning.',
     points: ['English and Maths', 'EVS', 'GK quiz and essay writing', 'Yoga and physical activity'],
   },
 ];
 
 const stats = [
-  { value: '4', label: 'Classes now: Nursery, LKG, UKG, Class 1' },
+  { value: '8', label: 'Classes now: Nursery, LKG, UKG, Class 1 to 5' },
   { value: 'Class 8', label: 'Permitted to teach up to' },
   { value: '6', label: 'School days a week, Mon to Sat' },
   { value: site.founded, label: `Established in ${site.address.locality}` },
@@ -54,7 +54,7 @@ export default function ProgramsPage() {
         crumb="Programs"
         eyebrow="What we offer"
         title={<>Learning that grows <em>with your child</em></>}
-        lead={`From Nursery to Class 1 today — and up to Class 8 as the school grows — the English-medium, CBSE-pattern curriculum at ${site.fullName} is designed to spark curiosity and build a strong foundation.`}
+        lead={`From Nursery to Class 5 today — and up to Class 8 as the school grows — the English-medium, CBSE-pattern curriculum at ${site.fullName} is designed to spark curiosity and build a strong foundation.`}
       />
 
       <section className="section surface-paper">
@@ -102,7 +102,7 @@ export default function ProgramsPage() {
           </ul>
           <p className={styles.mt} style={{ maxWidth: 760, color: 'var(--ink-soft)' }}>
             <strong>Higher classes:</strong> {site.name} has permission to run classes from {site.gradesPermitted}.
-            Classes beyond Class 1 will open as the school grows — call {site.phone} to ask about a specific class.
+            Classes 6, 7 and 8 will open as the school grows — call {site.phone} to ask about a specific class.
           </p>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function ProgramsPage() {
                   <tr>
                     <th scope="col">Activity</th>
                     <th scope="col">Early Years (Nursery – UKG)</th>
-                    <th scope="col">Primary (Class 1)</th>
+                    <th scope="col">Primary (Class 1 – 5)</th>
                   </tr>
                 </thead>
                 <tbody>

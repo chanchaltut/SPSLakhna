@@ -12,12 +12,12 @@ export const faqs = [
     a: `Swagat Public School is in ${site.address.area}, ${site.address.locality}, ${site.address.block} block, ${site.address.district} district, ${site.address.region} ${site.address.postalCode}, India. Directions are on the Contact page and on Google Maps.`,
   },
   {
-    q: `Which is a good English-medium school for Nursery to Class 1 in ${site.address.locality}, ${site.address.district}?`,
-    a: `Swagat Public School (SPS Lakhna) is a co-educational, English-medium school in ${site.address.locality} that follows the CBSE pattern. It was established in ${site.founded}, teaches Nursery, LKG, UKG and Class 1 today, and is permitted to run classes up to Class 8. Children also take part in ${activities.slice(0, 3).join(", ").toLowerCase()} and drawing classes. Parents are welcome to visit before applying.`,
+    q: `Which is a good English-medium school for Nursery to Class 5 in ${site.address.locality}, ${site.address.district}?`,
+    a: `Swagat Public School (SPS Lakhna) is a co-educational, English-medium school in ${site.address.locality} that follows the CBSE pattern. It was established in ${site.founded}, teaches Nursery, LKG, UKG and Class 1 to Class 5 today, and is permitted to run classes up to Class 8. Children also take part in ${activities.slice(0, 3).join(", ").toLowerCase()} and drawing classes. Parents are welcome to visit before applying.`,
   },
   {
     q: "Which classes does Swagat Public School offer? Does it go up to Class 8?",
-    a: `The school currently runs Nursery, LKG, UKG and Class 1. It has permission to run classes from ${site.gradesPermitted}, so higher classes can be added as the school grows. Call ${site.phone} to ask about the class you need.`,
+    a: `The school currently runs Nursery, LKG, UKG and Class 1 to Class 5. It has permission to run classes from ${site.gradesPermitted}, so Classes 6, 7 and 8 can be added as the school grows. Call ${site.phone} to ask about the class you need.`,
   },
   {
     q: "Who runs Swagat Public School, Lakhna?",
@@ -32,8 +32,8 @@ export const faqs = [
     a: `Swagat Public School in ${site.address.locality} (${site.address.block} block) welcomes children from ${site.address.locality} and nearby parts of ${site.address.district} district, including ${nearby}. Call or WhatsApp ${site.phone} to plan a visit.`,
   },
   {
-    q: "What is the admission age for Nursery, LKG, UKG and Class 1?",
-    a: "Children aged 3 to 4 years are admitted to Nursery. LKG is for ages 4 to 5 and UKG is for ages 5 to 6. Class 1 starts at around 6 years.",
+    q: "What is the admission age for Nursery, LKG, UKG and Classes 1 to 5?",
+    a: "Children aged 3 to 4 years are admitted to Nursery. LKG is for ages 4 to 5 and UKG is for ages 5 to 6. Class 1 starts at around 6 years, and Classes 2 to 5 follow year by year up to about 11 years.",
   },
   {
     q: "What activities are there besides studies?",

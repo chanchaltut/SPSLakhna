@@ -8,7 +8,7 @@ export const site = {
   fullName: "Swagat Public School, Lakhna",
   tagline: "Where Every Child is Welcome",
   description:
-    "Swagat Public School (SPS Lakhna) is a co-educational, English-medium school following the CBSE pattern in Lakhna (Purna Basti), Komna block, Nuapada district, Odisha. Classes run from Nursery to Class 1 today, and the school is permitted to teach up to Class 8. Established 2024.",
+    "Swagat Public School (SPS Lakhna) is a co-educational, English-medium school following the CBSE pattern in Lakhna (Purna Basti), Komna block, Nuapada district, Odisha. Classes run from Nursery to Class 5 today, and the school is permitted to teach up to Class 8. Established 2024.",
   founded: "2024",
   medium: "English medium, CBSE-pattern curriculum",
 
@@ -57,7 +57,7 @@ export const site = {
   },
 
   // Classes running now, and the range the school has permission to run
-  grades: "Nursery to Class 1",
+  grades: "Nursery to Class 5",
   gradesPermitted: "Nursery to Class 8",
   ogImage: "/og-banner.png",
   logo: "/images/sps-seal.svg",

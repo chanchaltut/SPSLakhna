@@ -18,7 +18,7 @@ import styles from './home.module.css';
 export function Hero() {
   const facts = [
     { value: site.founded, label: 'Established' },
-    { value: 'Nursery – 1', label: 'Classes running now' },
+    { value: 'Nursery – 5', label: 'Classes running now' },
     { value: 'Class 8', label: 'Permitted up to' },
     { value: 'English', label: 'Medium, CBSE pattern' },
   ];
@@ -176,7 +176,7 @@ export function Programs() {
             <h2 className="title">Tailored learning for <em>every age</em></h2>
           </div>
           <p className="lead">
-            From Nursery to Class 1 today — and up to Class 8 as the school grows — each stage is planned
+            From Nursery to Class 5 today — and up to Class 8 as the school grows — each stage is planned
             around what children of that age need, so every child&rsquo;s abilities are noticed and supported.
           </p>
         </div>
@@ -208,7 +208,7 @@ export function Programs() {
 
 /* ─── Features ─── */
 const features = [
-  { icon: BookOpen, title: 'English medium, CBSE pattern', desc: 'A co-educational English-medium school that follows the CBSE pattern, from Nursery to Class 1 now and permitted up to Class 8.' },
+  { icon: BookOpen, title: 'English medium, CBSE pattern', desc: 'A co-educational English-medium school that follows the CBSE pattern, from Nursery to Class 5 now and permitted up to Class 8.' },
   { icon: Users, title: 'Qualified, caring staff', desc: 'A founder, director and teaching team who know every child by name, with flexible and affordable sessions for families.' },
   { icon: ShieldCheck, title: 'Safe and secure', desc: 'Bright, child-friendly classrooms in Purna Basti, Lakhna, with a play corner for the youngest learners.' },
   { icon: Flower2, title: 'Yoga and meditation', desc: 'Regular yoga and meditation sessions help children settle, focus and stay healthy.' },
