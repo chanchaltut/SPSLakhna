@@ -93,9 +93,10 @@ export const site = {
   socials: {
     facebook: "",
     instagram: "https://www.instagram.com/swagat_public_school2024/",
-    youtube: "",
+    youtube: "https://www.youtube.com/@SwagatLakhna",
   },
   instagramHandle: "@swagat_public_school2024",
+  youtubeHandle: "@SwagatLakhna",
 } as const;
 
 export const absoluteUrl = (path = "/") => `${site.url}${path === "/" ? "" : path}`;

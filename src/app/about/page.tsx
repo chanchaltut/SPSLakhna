@@ -132,6 +132,7 @@ export default function AboutPage() {
             <div className={styles.factRow}><dt>Phone / WhatsApp</dt><dd><a href={site.phoneHref}>{site.phone}</a> (also WhatsApp), <a href={site.phone2Href}>{site.phone2}</a></dd></div>
             <div className={styles.factRow}><dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
             <div className={styles.factRow}><dt>Instagram</dt><dd><a href={site.socials.instagram} target="_blank" rel="noopener noreferrer">{site.instagramHandle}</a></dd></div>
+            <div className={styles.factRow}><dt>YouTube</dt><dd><a href={site.socials.youtube} target="_blank" rel="noopener noreferrer">{site.youtubeHandle}</a></dd></div>
           </dl>
           <p style={{ marginTop: 28 }}>
             <Link href="/programs" className="text-link">See what each class learns <ArrowRight size={16} /></Link>

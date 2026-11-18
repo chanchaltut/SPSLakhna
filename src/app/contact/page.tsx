@@ -1,6 +1,6 @@
 import React from 'react';
 import { pageMetadata } from '@/lib/seo';
-import { Phone, Mail, MapPin, Clock, Navigation, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Navigation, Instagram, Youtube } from 'lucide-react';
 import GoogleMapEmbed from '@/components/ui/GoogleMapEmbed';
 import PageHeader from '@/components/ui/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
@@ -53,6 +53,11 @@ export default function ContactPage() {
               <Instagram size={22} strokeWidth={1.7} />
               <span className={styles.infoLabel}>Instagram</span>
               <span className={styles.infoValue}>{site.instagramHandle}</span>
+            </a>
+            <a href={site.socials.youtube} target="_blank" rel="noopener noreferrer" className={styles.infoCard}>
+              <Youtube size={22} strokeWidth={1.7} />
+              <span className={styles.infoLabel}>YouTube</span>
+              <span className={styles.infoValue}>{site.youtubeHandle}</span>
             </a>
             <div className={styles.infoCard}>
               <Clock size={22} strokeWidth={1.7} />

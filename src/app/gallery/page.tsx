@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Instagram } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
 import { pageMetadata } from '@/lib/seo';
 import { BreadcrumbJsonLd, GalleryJsonLd, EventsJsonLd } from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
@@ -71,6 +71,14 @@ export default function GalleryPage() {
               <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-link">
                 <Instagram size={16} /> {site.instagramHandle}
               </a>
+              {site.socials.youtube && (
+                <>
+                  {' '}and videos on YouTube:{' '}
+                  <a href={site.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-link">
+                    <Youtube size={16} /> {site.youtubeHandle}
+                  </a>
+                </>
+              )}
             </p>
           )}
         </div>

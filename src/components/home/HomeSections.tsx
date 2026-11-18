@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight, Plus, Users, BookOpen, ShieldCheck, Flower2, Music, GraduationCap,
-  MapPin, Phone, Mail, Clock, Navigation, Instagram,
+  MapPin, Phone, Mail, Clock, Navigation, Instagram, Youtube,
 } from 'lucide-react';
 import { LogoMark } from '@/components/ui/Logo';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppButton';
@@ -281,6 +281,11 @@ export function SchoolLife() {
               <Instagram size={16} /> Follow {site.instagramHandle} on Instagram
             </a>
           )}
+          {site.socials.youtube && (
+            <a href={site.socials.youtube} target="_blank" rel="noopener noreferrer" className="text-link">
+              <Youtube size={16} /> Watch school videos on YouTube
+            </a>
+          )}
         </div>
       </div>
     </section>
@@ -432,6 +437,10 @@ export function Visit() {
             <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer">
               <Instagram size={18} />
               <span><small>Instagram</small>{site.instagramHandle}</span>
+            </a>
+            <a href={site.socials.youtube} target="_blank" rel="noopener noreferrer">
+              <Youtube size={18} />
+              <span><small>YouTube</small>{site.youtubeHandle}</span>
             </a>
           </address>
 

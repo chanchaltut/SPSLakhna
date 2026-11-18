@@ -49,7 +49,7 @@ export const faqs = [
   },
   {
     q: "What activities are there besides studies?",
-    a: `Students have ${activities.join(", ").toLowerCase()}. The school celebrates Independence Day, Janmashtami, Ganesh Puja, Children's Day and Gandhi Jayanti, and has run a plantation programme and a Nutrition Month healthy-food activity. Photos are on the Gallery page and on Instagram (${site.instagramHandle}).`,
+    a: `Students have ${activities.join(", ").toLowerCase()}. The school celebrates Independence Day, Janmashtami, Ganesh Puja, Children's Day and Gandhi Jayanti, and has run a plantation programme and a Nutrition Month healthy-food activity. Photos are on the Gallery page and on Instagram (${site.instagramHandle}), and videos are on the school's YouTube channel (${site.socials.youtube}).`,
   },
   {
     q: "How do I apply for admission at SPS Lakhna?",
@@ -65,6 +65,6 @@ export const faqs = [
   },
   {
     q: "How can I contact Swagat Public School, Lakhna?",
-    a: `Call or WhatsApp ${site.phone}, call ${site.phone2}, email ${site.email}, follow ${site.instagramHandle} on Instagram, or send a message through the Contact page of ${domain}.`,
+    a: `Call or WhatsApp ${site.phone}, call ${site.phone2}, email ${site.email}, follow ${site.instagramHandle} on Instagram, watch the school's videos on YouTube (${site.youtubeHandle}), or send a message through the Contact page of ${domain}.`,
   },
 ] as const;
