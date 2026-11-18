@@ -20,6 +20,15 @@ export const activities = [
   "Drawing and art",
 ] as const;
 
+/** From the school's 2026-27 admission banner: extra coaching for senior primary students. */
+export const entranceCoaching = {
+  title: "Entrance exam coaching for Class 4 and Class 5",
+  short: "Navodaya, Model School and Sainik School entrance coaching",
+  classes: "Class 4 and Class 5",
+  exams: ["Jawahar Navodaya Vidyalaya (JNVST)", "Model School (Odisha Adarsha Vidyalaya)", "Sainik School (AISSEE)"],
+  desc: "Special, challenging coaching for Class 4 and Class 5 students to prepare for the entrance tests of Navodaya, Model School, Sainik School and similar schools.",
+} as const;
+
 export type StaffMember = {
   id: string;
   name: string;

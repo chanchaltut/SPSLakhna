@@ -1,0 +1,95 @@
+<!doctype html>
+<!--
+  Source for public/og-image.jpg (1200x630 link preview).
+  Render: google-chrome --headless=new --hide-scrollbars --allow-file-access-from-files --force-device-scale-factor=2 --window-size=1200,630 --virtual-time-budget=8000 --screenshot=og2x.png file://$PWD/og.html
+  then downscale og2x.png to 1200x630 and save as JPEG (quality ~80, keep under 300 KB for WhatsApp).
+  photo.jpg is a crop of images/sps-lakhna-school-building-students-morning-line-lakhna.jpg.
+  After changing the image, give it a new filename and update site.ogImage so preview caches refresh.
+-->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@500;600;700&display=block" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden;background:#2A1238}
+  .card{position:relative;width:1200px;height:630px;overflow:hidden;
+    background:
+      radial-gradient(900px 600px at -10% -20%, #5C2D80 0%, rgba(92,45,128,0) 60%),
+      linear-gradient(160deg,#47206B 0%,#341650 55%,#2A1238 100%);
+    font-family:Figtree,sans-serif;color:#FAF7F2}
+  /* faint paper grain */
+  .grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  /* oversized seal watermark */
+  .wm{position:absolute;left:-170px;bottom:-210px;width:520px;height:520px;opacity:.045;filter:grayscale(1) brightness(2.2)}
+
+  .photo{position:absolute;top:0;right:0;width:640px;height:630px;
+    background:url(photo.jpg) center/cover no-repeat}
+  .photo::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,rgba(42,18,56,.55) 0%,rgba(42,18,56,0) 18%),
+               linear-gradient(0deg,rgba(26,10,36,.78) 0%,rgba(26,10,36,0) 26%)}
+  .seam{position:absolute;top:0;left:560px;width:3px;height:630px;
+    background:linear-gradient(180deg,#FFD98A,#F5A623 60%,#E0951A)}
+
+  .caption{position:absolute;right:46px;bottom:34px;text-align:right;
+    font-size:15px;letter-spacing:.02em;color:rgba(250,247,242,.92)}
+  .caption b{display:block;font-family:Fraunces,serif;font-style:italic;font-weight:400;
+    font-size:21px;letter-spacing:0;color:#fff;margin-bottom:3px}
+
+  /* certificate frame */
+  .frame{position:absolute;inset:18px;border:1px solid rgba(255,217,138,.45);border-radius:6px;pointer-events:none}
+  .frame::after{content:"";position:absolute;inset:5px;border:1px solid rgba(255,217,138,.18);border-radius:3px}
+
+  .seal{position:absolute;left:486px;top:74px;width:150px;height:150px;border-radius:50%;
+    box-shadow:0 0 0 6px rgba(42,18,56,.9),0 18px 40px rgba(0,0,0,.45)}
+
+  .copy{position:absolute;left:64px;top:62px;width:440px}
+  .eyebrow{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px;
+    letter-spacing:.26em;color:#FFD98A;text-transform:uppercase}
+  .eyebrow i{display:block;width:34px;height:2px;background:#F5A623}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:77px;line-height:.97;
+    letter-spacing:-.015em;margin-top:22px;color:#FFFFFF;font-variation-settings:"opsz" 120}
+  .where{margin-top:18px;font-size:20px;font-weight:600;letter-spacing:.04em;color:#EDE0F7}
+  .where span{color:#F5A623;padding:0 6px}
+  .motto{margin-top:30px;font-family:Fraunces,serif;font-style:italic;font-weight:400;
+    font-size:31px;line-height:1.15;color:#DCC8EC}
+  .motto em{color:#FFD98A;font-style:italic}
+
+  .facts{position:absolute;left:64px;bottom:118px;display:flex;gap:0;font-size:17px;font-weight:600;color:#FAF7F2}
+  .facts div{padding:0 18px;border-left:1px solid rgba(255,217,138,.45);line-height:1.25}
+  .facts div:first-child{padding-left:0;border-left:0}
+  .facts small{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C9B2DD;margin-bottom:4px}
+
+  .cta{position:absolute;left:64px;bottom:50px;display:flex;align-items:center;gap:18px}
+  .pill{background:linear-gradient(180deg,#FFD98A,#F5A623);color:#2A1238;font-weight:700;
+    font-size:18px;padding:11px 20px 12px;border-radius:999px;letter-spacing:.01em}
+  .tel{font-size:20px;font-weight:700;color:#fff;letter-spacing:.03em}
+  .tel small{font-weight:500;color:#C9B2DD;font-size:15px;letter-spacing:.02em;margin-right:6px}
+</style></head>
+<body><div class="card">
+  <div class="grain"></div>
+  <img class="wm" src="seal.svg" alt="">
+  <div class="photo"></div>
+  <div class="seam"></div>
+  <div class="caption"><b>Our school, our children</b>Purna Basti, Lakhna &middot; PIN 766105</div>
+
+  <div class="copy">
+    <div class="eyebrow"><i></i>Estd. 2024</div>
+    <h1>Swagat<br>Public School</h1>
+    <div class="where">LAKHNA<span>&middot;</span>NUAPADA<span>&middot;</span>ODISHA</div>
+    <div class="motto">Where every child<br>is <em>welcome.</em></div>
+  </div>
+
+  <div class="facts">
+    <div><small>Classes</small>Nursery – Class 5</div>
+    <div><small>Medium</small>English</div>
+    <div><small>Curriculum</small>CBSE pattern</div>
+  </div>
+
+  <div class="cta">
+    <div class="pill">Admissions open 2026–27</div>
+    <div class="tel"><small>Call</small>84579 69611</div>
+  </div>
+
+  <img class="seal" src="seal.svg" alt="">
+  <div class="frame"></div>
+</div></body></html>

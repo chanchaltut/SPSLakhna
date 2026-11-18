@@ -12,8 +12,9 @@ export const site = {
   founded: "2024",
   medium: "English medium, CBSE-pattern curriculum",
 
-  // Placeholder domain — update once the final domain is confirmed
-  url: "https://spslakhna.in",
+  // Live domain (the bare domain redirects here on Vercel)
+  url: "https://www.swagatpublicschoollakhna.in",
+  domain: "swagatpublicschoollakhna.in",
 
   email: "swagatlakhna24@gmail.com",
   phone: "+91 84579 69611",
@@ -41,6 +42,20 @@ export const site = {
     line: "Purna Basti, Lakhna, Block Komna, Dist. Nuapada, Odisha 766105",
   },
 
+  // Other names people use for the school (the building's signboard reads "Swagat Play School")
+  alsoKnownAs: [
+    "SPS Lakhna",
+    "SPS",
+    "Swagat Public School Lakhna",
+    "Swagat Public School, Nuapada",
+    "Swagat Play School",
+    "Swagat Play School, Lakhna",
+  ],
+
+  // Search Console HTML-tag token (content="..." value only). Leave empty until the school verifies.
+  googleSiteVerification: "",
+  bingSiteVerification: "",
+
   // Towns and areas around Lakhna that the school serves
   nearby: ["Nuapada", "Khariar Road", "Komna", "Khariar"],
 
@@ -59,7 +74,12 @@ export const site = {
   // Classes running now, and the range the school has permission to run
   grades: "Nursery to Class 5",
   gradesPermitted: "Nursery to Class 8",
-  ogImage: "/og-banner.png",
+  // Link-preview image for WhatsApp, Facebook, X, LinkedIn. JPEG under 300 KB so WhatsApp shows it.
+  // Source: design-og/og.html (real school building photo). Rename the file when it changes, to bust preview caches.
+  ogImage: "/og-image.jpg",
+  ogImageType: "image/jpeg",
+  ogImageAlt:
+    "Swagat Public School, Lakhna, Nuapada, Odisha: students in purple uniform lined up outside the school building in Purna Basti, Lakhna. English medium, CBSE pattern, Nursery to Class 5. Admissions open 2026-27.",
   logo: "/images/sps-seal.svg",
   logoPng: "/images/sps-logo-square.png",
 

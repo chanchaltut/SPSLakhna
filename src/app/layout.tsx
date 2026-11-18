@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { SchoolJsonLd } from "@/components/seo/JsonLd";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { site } from "@/lib/site";
+import { ogImages } from "@/lib/seo";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -32,7 +33,9 @@ export const metadata: Metadata = {
     default: "Swagat Public School, Lakhna | English Medium School in Nuapada, Odisha",
     template: "%s | Swagat Public School, Lakhna",
   },
-  description: site.description,
+  // Kept to roughly 160 characters so Google shows it whole; the long version lives in site.description.
+  description:
+    "Swagat Public School (SPS Lakhna): English-medium, CBSE-pattern school in Lakhna, Nuapada, Odisha. Nursery to Class 5 and Navodaya coaching. Admissions open 2026-27.",
   applicationName: site.fullName,
   keywords: [
     "Swagat Public School",
@@ -48,6 +51,19 @@ export const metadata: Metadata = {
     "English medium school in Komna block",
     "school in Purna Basti Lakhna",
     "Swagat Play School Lakhna",
+    "Swagat Public School Nuapada",
+    "swagatpublicschoollakhna.in",
+    "best school in Lakhna for children",
+    "best English medium school in Lakhna",
+    "best school in Komna block",
+    "best school in Nuapada for kids",
+    "school near me Lakhna",
+    "English medium school near Komna",
+    "Navodaya coaching in Lakhna",
+    "Navodaya entrance coaching Nuapada",
+    "Sainik School coaching Nuapada",
+    "Model School entrance coaching Komna",
+    "Class 5 Navodaya preparation Nuapada",
     "Narendra Nag Swagat Public School",
     "Reena Kumbhar Swagat Public School",
     "Nursery to Class 5 school Lakhna",
@@ -66,29 +82,30 @@ export const metadata: Metadata = {
   alternates: { canonical: "/", languages: { "en-IN": "/", "x-default": "/" } },
   formatDetection: { telephone: true, email: true, address: true },
   openGraph: {
-    title: "Swagat Public School, Lakhna | Where Every Child is Welcome",
+    title: "Swagat Public School, Lakhna | English Medium School in Nuapada, Odisha",
     description:
-      "English-medium, CBSE-pattern school in Purna Basti, Lakhna, Nuapada, Odisha. Admissions open for Nursery to Class 5; permitted up to Class 8.",
-    url: site.url,
+      "Nursery to Class 5 · CBSE pattern · Estd 2024. Co-ed English-medium school in Purna Basti, Lakhna (Komna block, Nuapada). Admissions open for 2026-27. Call or WhatsApp +91 84579 69611.",
+    url: "/",
     siteName: site.fullName,
-    images: [
-      {
-        url: site.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Swagat Public School, Lakhna — Where Every Child is Welcome",
-      },
-    ],
+    images: ogImages,
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Swagat Public School, Lakhna",
+    title: "Swagat Public School, Lakhna | English Medium School in Nuapada",
     description:
-      "English-medium, CBSE-pattern school in Lakhna, Nuapada, Odisha. Nursery to Class 5 now, permitted up to Class 8.",
-    images: [site.ogImage],
+      "Co-ed, English-medium, CBSE-pattern school in Lakhna, Nuapada, Odisha. Nursery to Class 5, permitted up to Class 8. Admissions open 2026-27.",
+    images: [{ url: site.ogImage, alt: site.ogImageAlt }],
   },
+  ...(site.googleSiteVerification || site.bingSiteVerification
+    ? {
+        verification: {
+          ...(site.googleSiteVerification ? { google: site.googleSiteVerification } : {}),
+          ...(site.bingSiteVerification ? { other: { "msvalidate.01": site.bingSiteVerification } } : {}),
+        },
+      }
+    : {}),
   robots: {
     index: true,
     follow: true,
@@ -105,6 +122,7 @@ export const metadata: Metadata = {
     "geo.region": site.address.regionCode,
     "geo.placename": `${site.address.locality}, ${site.address.district}, ${site.address.region}`,
     "geo.position": `${site.geo.lat};${site.geo.lng}`,
+    "geo.country": site.address.countryCode,
     ICBM: `${site.geo.lat}, ${site.geo.lng}`,
   },
 };

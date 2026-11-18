@@ -1,16 +1,16 @@
 import React from 'react';
-import { Palette, Brain, Check } from 'lucide-react';
+import { Palette, Brain, Check, GraduationCap } from 'lucide-react';
 import { pageMetadata } from '@/lib/seo';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import CTABand from '@/components/ui/CTABand';
-import { programs, activities } from '@/lib/content';
+import { programs, activities, entranceCoaching } from '@/lib/content';
 import { site } from '@/lib/site';
 import styles from '../inner.module.css';
 
 export const metadata = pageMetadata(
   'Academic Programs',
-  'Nursery, LKG, UKG and Class 1 to 5 at Swagat Public School, Lakhna, Nuapada — English medium, CBSE pattern, permitted up to Class 8. Activities, daily schedule and timings.',
+  'Nursery, LKG, UKG and Class 1 to 5 at Swagat Public School, Lakhna, Nuapada — English medium, CBSE pattern, permitted up to Class 8. Navodaya and Sainik School entrance coaching for Class 4 and 5, activities and daily timings.',
   '/programs',
 );
 
@@ -103,6 +103,27 @@ export default function ProgramsPage() {
           <p className={styles.mt} style={{ maxWidth: 760, color: 'var(--ink-soft)' }}>
             <strong>Higher classes:</strong> {site.name} has permission to run classes from {site.gradesPermitted}.
             Classes 6, 7 and 8 will open as the school grows — call {site.phone} to ask about a specific class.
+          </p>
+        </div>
+      </section>
+
+      <section className="section surface-cream" id="entrance-coaching">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow"><GraduationCap size={15} aria-hidden="true" style={{ verticalAlign: '-2px', marginRight: 6 }} />For Class 4 and Class 5</span>
+            <h2 className="title">Navodaya, Model School and Sainik School <em>entrance coaching</em> in {site.address.locality}</h2>
+            <p className="lead" style={{ marginTop: 14 }}>
+              {entranceCoaching.desc} It is open to students of {site.fullName}, which serves families in{' '}
+              {site.address.locality}, {site.address.block} block and nearby parts of {site.address.district} district.
+            </p>
+          </div>
+          <ul className={styles.checkList}>
+            {entranceCoaching.exams.map((e) => (
+              <li key={e}><Check size={17} strokeWidth={2.4} /> {e}</li>
+            ))}
+          </ul>
+          <p style={{ marginTop: 20 }}>
+            Call or WhatsApp <a href={site.phoneHref}>{site.phone}</a> to ask about coaching timings and seats.
           </p>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { site } from "./site";
-import { founder, director, staff, activities } from "./content";
+import { founder, director, staff, activities, entranceCoaching } from "./content";
 
 const nearby = `${site.nearby.slice(0, -1).join(", ")} and ${site.nearby[site.nearby.length - 1]}`;
 const domain = site.url.replace("https://", "");
@@ -12,8 +12,20 @@ export const faqs = [
     a: `Swagat Public School is in ${site.address.area}, ${site.address.locality}, ${site.address.block} block, ${site.address.district} district, ${site.address.region} ${site.address.postalCode}, India. Directions are on the Contact page and on Google Maps.`,
   },
   {
+    q: `Which is the best school in ${site.address.locality} for children?`,
+    a: `Families in ${site.address.locality} usually compare the medium of teaching, the curriculum, the classes offered, activities and how close the school is. Swagat Public School (SPS Lakhna) in ${site.address.area}, ${site.address.locality} is a co-educational, English-medium school that follows the CBSE pattern. It was established in ${site.founded}, teaches Nursery, LKG, UKG and Class 1 to Class 5 today, is permitted to run classes up to Class 8, and gives Class 4 and 5 students extra coaching for the Navodaya, Model School and Sainik School entrance tests. Children also take part in ${activities.slice(0, 3).join(", ").toLowerCase()} and drawing classes, and the school's Independence Day 2026 programme was reported in a local Odia newspaper. The best way to decide is to visit: call or WhatsApp ${site.phone}.`,
+  },
+  {
     q: `Which is a good English-medium school for Nursery to Class 5 in ${site.address.locality}, ${site.address.district}?`,
-    a: `Swagat Public School (SPS Lakhna) is a co-educational, English-medium school in ${site.address.locality} that follows the CBSE pattern. It was established in ${site.founded}, teaches Nursery, LKG, UKG and Class 1 to Class 5 today, and is permitted to run classes up to Class 8. Children also take part in ${activities.slice(0, 3).join(", ").toLowerCase()} and drawing classes. Parents are welcome to visit before applying.`,
+    a: `Swagat Public School (SPS Lakhna) is a co-educational, English-medium school in ${site.address.locality} that follows the CBSE pattern. It was established in ${site.founded}, teaches Nursery, LKG, UKG and Class 1 to Class 5 today, and is permitted to run classes up to Class 8. Parents are welcome to visit before applying.`,
+  },
+  {
+    q: `Is there Navodaya or Sainik School entrance coaching in ${site.address.locality}?`,
+    a: `Yes. Swagat Public School gives special, challenging coaching to ${entranceCoaching.classes} students to prepare for the entrance tests of Jawahar Navodaya Vidyalaya, Model School (Odisha Adarsha Vidyalaya), Sainik School and similar schools. Call ${site.phone} to ask about the coaching timings.`,
+  },
+  {
+    q: `Are "Swagat Play School" and "Swagat Public School" in ${site.address.locality} the same school?`,
+    a: `Yes. The signboard on the school building in ${site.address.area}, ${site.address.locality} reads "Swagat Play School — English Medium School, CBSE Pattern". The school's full name is Swagat Public School, also called SPS Lakhna, and it now teaches from Nursery to Class 5.`,
   },
   {
     q: "Which classes does Swagat Public School offer? Does it go up to Class 8?",
@@ -28,7 +40,7 @@ export const faqs = [
     a: `Yes, it is an English-medium school that follows the CBSE pattern of teaching. It is co-educational, for boys and girls.`,
   },
   {
-    q: `Is there a good school near ${site.nearby[2]}, ${site.nearby[1]} or ${site.nearby[0]} town?`,
+    q: `Is there a good English-medium school near me in ${site.nearby[2]}, ${site.nearby[1]} or ${site.nearby[0]}?`,
     a: `Swagat Public School in ${site.address.locality} (${site.address.block} block) welcomes children from ${site.address.locality} and nearby parts of ${site.address.district} district, including ${nearby}. Call or WhatsApp ${site.phone} to plan a visit.`,
   },
   {

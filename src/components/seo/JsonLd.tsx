@@ -1,7 +1,7 @@
 import React from 'react';
 import { site, absoluteUrl } from '@/lib/site';
 import { faqs } from '@/lib/faqs';
-import { programs, staff, founder, activities } from '@/lib/content';
+import { programs, staff, founder, activities, entranceCoaching } from '@/lib/content';
 import { events, allPhotos, featured } from '@/lib/gallery';
 
 const sameAs = Object.values(site.socials).filter(Boolean);
@@ -25,6 +25,34 @@ const schoolPlace = {
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
 };
 
+/** Lakhna -> Komna block -> Nuapada district -> Odisha -> India, so engines can place the school precisely. */
+const lakhnaPlace = {
+  '@type': 'Place',
+  '@id': `${site.url}/#lakhna`,
+  name: `${site.address.locality} (${site.address.area}), ${site.address.district}, ${site.address.region}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: site.address.locality,
+    addressRegion: site.address.region,
+    postalCode: site.address.postalCode,
+    addressCountry: site.address.countryCode,
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+  containedInPlace: {
+    '@type': 'AdministrativeArea',
+    name: `${site.address.block} block`,
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: `${site.address.district} district`,
+      containedInPlace: {
+        '@type': 'State',
+        name: site.address.region,
+        containedInPlace: { '@type': 'Country', name: site.address.country },
+      },
+    },
+  },
+};
+
 function Script({ data }: { data: object }) {
   return (
     <script
@@ -43,11 +71,22 @@ export function SchoolJsonLd() {
         '@type': ['School', 'Preschool', 'ElementarySchool'],
         '@id': schoolId,
         name: site.name,
-        alternateName: [site.shortName, site.fullName, 'SPS', 'Swagat Public School Lakhna', 'Swagat Play School, Lakhna'],
+        alternateName: [site.fullName, ...site.alsoKnownAs],
         slogan: site.tagline,
         description: site.description,
         url: site.url,
-        logo: absoluteUrl(site.logoPng),
+        logo: {
+          '@type': 'ImageObject',
+          '@id': `${site.url}/#logo`,
+          url: absoluteUrl(site.logoPng),
+          contentUrl: absoluteUrl(site.logoPng),
+          width: 1024,
+          height: 1024,
+          caption: `${site.fullName} school seal, established ${site.founded}`,
+        },
+        isicV4: '8510',
+        numberOfEmployees: { '@type': 'QuantitativeValue', value: staff.length },
+        location: { '@id': `${site.url}/#lakhna` },
         image: [
           absoluteUrl(featured.about),
           absoluteUrl(featured.hero),
@@ -83,21 +122,40 @@ export function SchoolJsonLd() {
           `kindergarten in ${site.address.locality} ${site.address.district}`,
           `Nursery LKG UKG admission ${site.address.locality}`,
           ...site.nearby.map((town) => `school near ${town}`),
+          `best school in ${site.address.locality}`,
+          `Navodaya entrance coaching in ${site.address.locality}`,
+          `Sainik School coaching in ${site.address.district}`,
+          'Swagat Play School',
         ].join(', '),
         ...(sameAs.length ? { sameAs } : {}),
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Classes offered',
-          itemListElement: programs.map((p) => ({
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Course',
-              name: `${p.title} at ${site.fullName}`,
-              description: `${p.desc} For children aged ${p.age.replace(' – ', ' to ')}.`,
-              inLanguage: 'en',
-              provider: { '@id': schoolId },
+          itemListElement: [
+            ...programs.map((p) => ({
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Course',
+                name: `${p.title} at ${site.fullName}`,
+                description: `${p.desc} For children aged ${p.age.replace(' – ', ' to ')}.`,
+                inLanguage: 'en',
+                provider: { '@id': schoolId },
+              },
+            })),
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Course',
+                '@id': `${site.url}/programs#entrance-coaching`,
+                name: `${entranceCoaching.title} at ${site.fullName}`,
+                description: `${entranceCoaching.desc} Exams: ${entranceCoaching.exams.join(', ')}.`,
+                educationalLevel: entranceCoaching.classes,
+                inLanguage: 'en',
+                url: absoluteUrl('/programs#entrance-coaching'),
+                provider: { '@id': schoolId },
+              },
             },
-          })),
+          ],
         },
         openingHoursSpecification: [
           {
@@ -128,9 +186,12 @@ export function SchoolJsonLd() {
           'English-medium education',
           'CBSE-pattern curriculum',
           'Play-based learning',
+          'Navodaya Vidyalaya entrance test preparation',
+          'Sainik School entrance test preparation',
           ...activities,
         ],
       },
+      lakhnaPlace,
       ...staff.map((p) => ({
         '@type': 'Person',
         '@id': personId(p.id),
@@ -154,6 +215,7 @@ export function SchoolJsonLd() {
         alternateName: site.shortName,
         inLanguage: 'en-IN',
         publisher: { '@id': `${site.url}/#school` },
+        about: { '@id': schoolId },
       },
     ],
   };
@@ -202,7 +264,7 @@ export function GalleryJsonLd() {
       width: p.width,
       height: p.height,
       caption: `${p.caption} — ${p.album.title}, ${site.fullName}`,
-      description: `${p.alt} at ${site.fullName}, ${site.address.locality}, ${site.address.district}.`,
+      description: `${p.alt} at ${site.fullName}, ${site.address.district}, ${site.address.region}.`,
       ...(p.album.date ? { dateCreated: p.album.date } : {}),
       contentLocation: schoolPlace,
       creditText: site.fullName,

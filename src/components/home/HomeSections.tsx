@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  ArrowRight, Plus, Users, BookOpen, ShieldCheck, Flower2, Music, Flag,
+  ArrowRight, Plus, Users, BookOpen, ShieldCheck, Flower2, Music, GraduationCap,
   MapPin, Phone, Mail, Clock, Navigation, Instagram,
 } from 'lucide-react';
 import { LogoMark } from '@/components/ui/Logo';
@@ -212,8 +212,8 @@ const features = [
   { icon: Users, title: 'Qualified, caring staff', desc: 'A founder, director and teaching team who know every child by name, with flexible and affordable sessions for families.' },
   { icon: ShieldCheck, title: 'Safe and secure', desc: 'Bright, child-friendly classrooms in Purna Basti, Lakhna, with a play corner for the youngest learners.' },
   { icon: Flower2, title: 'Yoga and meditation', desc: 'Regular yoga and meditation sessions help children settle, focus and stay healthy.' },
-  { icon: Music, title: 'Dance, song and drawing', desc: 'Dance, song, drawing, essay writing and GK quiz classes build confidence alongside academics.' },
-  { icon: Flag, title: 'Festivals and national days', desc: "Independence Day, Janmashtami, Ganesh Puja, Children's Day and Gandhi Jayanti are celebrated together every year." },
+  { icon: Music, title: 'Dance, song, drawing and festivals', desc: "Dance, song, drawing, essay writing and GK quiz classes, plus Independence Day, Janmashtami, Ganesh Puja and Children's Day celebrated together every year." },
+  { icon: GraduationCap, title: 'Navodaya and Sainik School coaching', desc: 'Special coaching for Class 4 and Class 5 students to prepare for the Navodaya, Model School and Sainik School entrance tests, right here in Lakhna.' },
 ];
 
 export function Features() {
@@ -221,7 +221,7 @@ export function Features() {
     <section className="section surface-paper">
       <div className="container">
         <div className="section-head section-head-center">
-          <span className="eyebrow eyebrow-center">Why families choose us</span>
+          <span className="eyebrow eyebrow-center">Why families in {site.address.locality} choose us</span>
           <h2 className="title">Everything your child needs to <em>grow, explore and play</em></h2>
         </div>
 

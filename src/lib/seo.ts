@@ -1,20 +1,31 @@
 import type { Metadata } from 'next';
 import { site } from './site';
 
-/** Metadata for an inner page: unique title, description, canonical and matching social tags. */
+/** The shared link-preview image (WhatsApp, Facebook, X, LinkedIn, Telegram). */
+export const ogImages = [
+  {
+    url: site.ogImage,
+    secureUrl: `${site.url}${site.ogImage}`,
+    width: 1200,
+    height: 630,
+    type: site.ogImageType,
+    alt: site.ogImageAlt,
+  },
+];
+
+/** Metadata for an inner page: unique title, description, canonical, hreflang and matching social tags. */
 export function pageMetadata(title: string, description: string, path: string): Metadata {
   const fullTitle = `${title} | ${site.fullName}`;
-  const images = [{ url: site.ogImage, width: 1200, height: 630, alt: `${site.fullName} — ${site.tagline}` }];
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: path, languages: { 'en-IN': path, 'x-default': path } },
     openGraph: {
       title: fullTitle,
       description,
       url: path,
       siteName: site.fullName,
-      images,
+      images: ogImages,
       locale: 'en_IN',
       type: 'website',
     },
@@ -22,7 +33,7 @@ export function pageMetadata(title: string, description: string, path: string): 
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [site.ogImage],
+      images: [{ url: site.ogImage, alt: site.ogImageAlt }],
     },
   };
 }
