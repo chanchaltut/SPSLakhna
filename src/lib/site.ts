@@ -76,7 +76,7 @@ export const site = {
   gradesPermitted: "Nursery to Class 8",
   // Link-preview image for WhatsApp, Facebook, X, LinkedIn. JPEG under 300 KB so WhatsApp shows it.
   // Source: design-og/og.html (real school building photo). Rename the file when it changes, to bust preview caches.
-  ogImage: "/og-image.jpg",
+  ogImage: "/og-image-v2.jpg",
   ogImageType: "image/jpeg",
   ogImageAlt:
     "Swagat Public School, Lakhna, Nuapada, Odisha: students in purple uniform lined up outside the school building in Purna Basti, Lakhna. English medium, CBSE pattern, Nursery to Class 5. Admissions open 2026-27.",
